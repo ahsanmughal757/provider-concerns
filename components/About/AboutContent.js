@@ -3,9 +3,13 @@ import React from "react";
 const AboutContent = () => {
   return (
     <>
-      <div className="about-area pt-100 pb-70">
+      <div className="about-area pt-5 pb-70">
         <div className="container">
-          <div className="row gx-5 align-items-center">
+          <div className="about-heading d-flex justify-content-center align-items-centers mt-3 mb-5 pb-5">
+            <h1>About</h1>
+          </div>
+
+          <div className="row mt-5 gx-5 align-items-center">
             <div className="col-lg-6">
               <div className="about-item about-right">
                 <img src="/images/about-shape1.png" alt="About" />

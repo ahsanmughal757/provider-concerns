@@ -3,7 +3,7 @@ import React from "react";
 const GoogleMap = () => {
   return (
     <>
-      <div className="map-area container mb-5">
+      <div id="contact" className="map-area container mb-5">
         <div className="row gx-3 map-container">
           <div className="card col-sm-12 col-md-7 col-lg-7">
             <iframe

@@ -20,13 +20,13 @@ const About = () => {
 
       <Navbar />
 
-      <PageBanner
+      {/* <PageBanner
         pageTitle="About"
         homePageUrl="/"
         homePageText="Home"
         activePageText="About"
         bgImage="page-title-one"
-      />
+      /> */}
 
       <AboutContent />
 

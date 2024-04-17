@@ -4,10 +4,10 @@ import Link from "next/link";
 const OurExpertise = () => {
   return (
     <>
-      <div className="expertise-area pb-70">
+      <div id="what-we-do" className="expertise-area pb-70">
         <div className="container">
           <div className="section-title">
-            <h2>Our Expertise</h2>
+            <h2>What we do</h2>
           </div>
 
           <div className="row align-items-center">

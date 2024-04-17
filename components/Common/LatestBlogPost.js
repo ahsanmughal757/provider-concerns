@@ -4,7 +4,7 @@ import Link from "next/link";
 const LatestBlogPost = () => {
   return (
     <>
-      <div className="blog-area pt-100 pb-70">
+      <div id="blogs" className="blog-area pt-100 pb-70">
         <div className="container">
           <div className="section-title">
             <h2>Our Latest Blogs</h2>
