@@ -9,6 +9,9 @@ import TestimonialSlider from "../components/Common/TestimonialSlider";
 import LatestBlogPost from "../components/Common/LatestBlogPost";
 import FunFacts from "../components/Common/FunFacts";
 import AboutContent from "../components/About/AboutContent";
+import Vision from "../components/About/Vision";
+import Mission from "../components/About/Mission";
+import GoogleMap from "../components/HomeOne/GoogleMap";
 
 const About = () => {
   return (
@@ -27,15 +30,21 @@ const About = () => {
 
       <AboutContent />
 
-      <FunFacts />
+      {/* <FunFacts /> */}
  
-      <OurExpertise />
+      {/* <OurExpertise /> */}
 
-      <Services />
+      <Vision />
 
-      <TestimonialSlider />
+      <Mission />
 
-      <LatestBlogPost />
+      {/* <Services /> */}
+
+      {/* <TestimonialSlider /> */}
+
+      {/* <LatestBlogPost /> */}
+
+      <GoogleMap />
 
       <Footer />
     </>

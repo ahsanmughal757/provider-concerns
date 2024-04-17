@@ -101,8 +101,8 @@ const Navbar = () => {
 
                   <li className="nav-item">
                     <Link
-                      href="#"
-                      onClick={(e) => e.preventDefault()}
+                      href="/specialities"
+                      // onClick={(e) => e.preventDefault()}
                       className="nav-link"
                     >
                       Specialities
