@@ -1,17 +1,14 @@
 import React from "react";
 import TopHeader from "../components/_App/TopHeader";
 import Navbar from "../components/_App/Navbar";
-import PageBanner from "../components/Common/PageBanner";
 import Footer from "../components/_App/Footer";
-import OurExpertise from "../components/HomeTwo/OurExpertise";
-import Services from "../components/HomeOne/Services";
-import TestimonialSlider from "../components/Common/TestimonialSlider";
-import LatestBlogPost from "../components/Common/LatestBlogPost";
-import FunFacts from "../components/Common/FunFacts";
+
 import AboutContent from "../components/About/AboutContent";
 import Vision from "../components/About/Vision";
 import Mission from "../components/About/Mission";
 import GoogleMap from "../components/HomeOne/GoogleMap";
+import WhatMakesDifferent from "../components/About/WhatMakesDifferent";
+import CompanyValues from "../components/About/CompanyValues";
 
 const About = () => {
   return (
@@ -27,8 +24,9 @@ const About = () => {
         activePageText="About"
         bgImage="page-title-one"
       /> */}
-
       <AboutContent />
+
+      <WhatMakesDifferent />
 
       {/* <FunFacts /> */}
  
@@ -37,6 +35,8 @@ const About = () => {
       <Vision />
 
       <Mission />
+
+      <CompanyValues />
 
       {/* <Services /> */}
 

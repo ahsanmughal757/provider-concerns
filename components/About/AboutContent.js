@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const AboutContent = () => {
   return (
@@ -15,33 +16,27 @@ const AboutContent = () => {
                 <img src="/images/about-shape1.png" alt="About" />
                 <h2>Provider Concerns Solutions</h2>
                 <p>
-                  Focusing on transforming healthcare financials, <a href="#" className="provider-link">Provider
-                  Concerns Solutions</a> stands as a leading medical billing company
-                  dedicated to optimizing your revenue cycle. With a profound
-                  understanding of the intricate landscape of healthcare
-                  reimbursement, we seamlessly integrate cutting-edge
-                  technology, industry expertise, and a client-centric approach
-                  to deliver unparalleled results.{" "}
+                  Provider concerns solutions is a competent medical billing
+                  company. Our aim is to optimize your revenue cycle. We
+                  seamlessly consolidate the cutting-edge technology, industry
+                  expertise and client oriented approach to produce exceptional
+                  outcomes.{" "}
                 </p>
                 <p>
-                  Our team of experienced medical billing professionals
-                  meticulously navigates the complexities of coding, compliance,
-                  and claims processing, ensuring swift and accurate
-                  reimbursement for healthcare providers.{" "}
+                  Our team is consist of skilled and expert members who
+                  professionally deal with complexities of coding, compliance
+                  and claims processing resulting in prompt reimbursement for
+                  healthcare providers.{" "}
                 </p>
                 <p>
-                  Provider Concerns Solutions empowers healthcare organizations
-                  to focus on patient care by handling the intricacies of
-                  billing, coding, and revenue optimization.{" "}
+                  Provider concerns solutions enables the healthcare
+                  organizations to concentrate on patients care by handling the
+                  complications of billing, coding and revenue optimization. We
+                  provide customized solutions to organizations of all sizes and
+                  specialties to fit in their respective trends.{" "}
                 </p>
-                <p>
-                  We pride ourselves on transparency, efficiency, and a
-                  commitment to maximizing your revenue potential. Whether you
-                  are a small practice or a large healthcare institution,
-                  Provider Concerns Solutions customizes solutions to fit your
-                  unique needs, allowing you to thrive in an ever-evolving
-                  healthcare landscape.{" "}
-                </p>
+
+                <Link href="/request-consultation">Request a Consultation</Link>
               </div>
             </div>
 

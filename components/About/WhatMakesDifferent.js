@@ -1,0 +1,67 @@
+import React from "react";
+import Link from "next/link";
+
+const WhatMakesDifferent = () => {
+  return (
+    <div className="services-area pb-70 mt-5">
+      <div className="container">
+        <div className="section-different d-flex flex-column justify-content-center align-items-center">
+          {/* <span>Services</span> */}
+          <h2>What Makes Us Different?</h2>
+        </div>
+
+        <div className="row justify-content-center">
+          <div className="col-sm-6 col-lg-3">
+            <div className="difference-item bg">
+              <div className="service-front">
+                <i class="icofont-chart-histogram"></i>
+                <span className="text-content">
+                  <h3>30%</h3>
+                  <h2 className="heading">Revenue Increase</h2>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6 col-lg-3">
+            <div className="difference-item bg">
+              <div className="service-front">
+                <i class="icofont-law-document"></i>
+                <span className="text-content">
+                  <h3>95%</h3>
+                  <h2 className="heading">Clean Claim Rate</h2>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6 col-lg-3">
+            <div className="difference-item bg">
+              <div className="service-front">
+                <i class="icofont-swoosh-down"></i>
+                <span className="text-content">
+                  <h3>30%</h3>
+                  <h2 className="heading">Reduction in AR</h2>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-sm-6 col-lg-3">
+            <div className="difference-item bg">
+              <div className="service-front">
+                <i class="icofont-document-folder"></i>
+                <span className="text-content">
+                  <h3>80%</h3>
+                  <h2 className="heading">Collection Ratios</h2>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WhatMakesDifferent;

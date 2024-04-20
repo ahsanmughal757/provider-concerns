@@ -810,7 +810,6 @@ button:focus {
   margin-bottom: 20px;
 }
 
-
 .about-item h2::after {
   content: "";
   display: block;
@@ -974,7 +973,7 @@ button:focus {
 
 .service-item {
   margin-bottom: 30px;
-  box-shadow: 0px 0px 25px 0px rgba(221, 221, 221, 0.7490196078);
+  box-shadow: 0px 5px 25px 5px rgba(221, 221, 221, 0.7490196078);
   text-align: center;
   position: relative;
   padding-top: 25px;
@@ -2289,6 +2288,130 @@ footer {
   max-width: 525px;
   margin-left: 85px;
 }
+
+.section-different {
+  max-width: 100%;
+  margin-left: 0;
+  margin-bottom: 40px;
+  margin-top: -5px;
+}
+
+.section-different span {
+  display: inline-block;
+  color: #0046c0;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.section-different h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #232323;
+}
+.section-different h2::after {
+  display: block;
+  position: relative;
+  margin-top: 15px;
+  content: "";
+  width: 80px;
+  height: 5px;
+  background-color: #0046c0;
+  border-radius: 5px;
+}
+
+.difference-item {
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 25px 5px rgba(221, 221, 221, 0.7490196078);
+  text-align: center;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: fit-content;
+}
+
+.difference-item .service-front:hover .text-content * {
+  color: #fd5f00;
+}
+.difference-item .service-front {
+  transition: 0.5s all ease;
+  display: block;
+}
+.difference-item .service-front i {
+  display: block;
+  color: #4d93e9;
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.difference-item .service-front h3 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 12px;
+  transition: 0.3s all ease-out;
+}
+
+.difference-item .service-front .heading {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 12px;
+  transition: 0.3s all ease-out;
+}
+
+.difference-item .service-front h3:hover {
+  color: #fd5f00;
+}
+
+.values-item {
+  margin-bottom: 30px;
+  box-shadow: 0px 3px 3px 2px rgba(221, 221, 221, 0.7490196078);
+  text-align: left;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 250px;
+  transition: 0.3s box-shadow ease;
+}
+.values-item:hover {
+  box-shadow: 0px 5px 25px 5px rgba(221, 221, 221, 0.7490196078);
+}
+
+
+.values-item .service-front:hover a * {
+  color: #fd5f00;
+}
+.values-item .service-front {
+  transition: 0.5s all ease;
+  display: block;
+}
+.values-item .service-front i {
+  display: block;
+  color: #4d93e9;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.values-item .service-front h3 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+  transition: 0.3s all ease-out;
+}
+
+.values-item .service-front p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: 0.3s all ease-out;
+}
+
+.values-item .service-front h3:hover {
+  color: #fd5f00;
+}
+
 
 /*-- End About --*/
 /*-- Speciality --*/
