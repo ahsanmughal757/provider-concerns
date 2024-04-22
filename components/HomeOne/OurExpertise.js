@@ -11,10 +11,10 @@ const OurExpertise = () => {
           </div>
 
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            {/* <div className="col-lg-12"> */}
               <div className="expertise-item">
                 <div className="row">
-                  <div className="col-sm-6 col-lg-6">
+                  <div className="col-sm-12 col-lg-6">
                     <div className="expertise-inner">
                       <i className="icofont-doctor-alt"></i>
                       <h3>
@@ -28,7 +28,7 @@ const OurExpertise = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="col-sm-6 col-lg-6">
+                  <div className="col-sm-12 col-lg-6">
                     <div className="expertise-inner">
                       <i className="icofont-stretcher"></i>
                       <h3>
@@ -42,7 +42,7 @@ const OurExpertise = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="col-sm-6 col-lg-6">
+                  <div className="col-sm-12 col-lg-6">
                     <div className="expertise-inner">
                       <i className="icofont-network"></i>
                       <h3>
@@ -57,7 +57,7 @@ const OurExpertise = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="col-sm-6 col-lg-6">
+                  <div className="col-sm-12 col-lg-6">
                     <div className="expertise-inner">
                       <i className="icofont-ambulance-cross"></i>
                       <h3>
@@ -71,16 +71,16 @@ const OurExpertise = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
             </div>
 
-            <div className="col-lg-6">
+            {/* <div className="col-lg-6">
               <div className="expertise-item">
                 <div className="expertise-right">
                   <img src="/images/about4.jpg" alt="Expertise" />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
