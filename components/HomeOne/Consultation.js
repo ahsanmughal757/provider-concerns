@@ -1,11 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Consultation = () => {
   return (
     <>
-      <div className="consultation-container container d-flex gap-5">
+      <div className="consultation-container container d-flex gap-5 mt-70">
         {/* Left Side Contact */}
-        <div className="call-us d-flex flex-column justify-content-center align-items-center">
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ x: -100, opacity: 0.2 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { delay: 0.3, duration: 0.2 },
+            type: "spring",
+          }}
+          className="call-us d-flex flex-column justify-content-center align-items-center"
+        >
           <div className="call-container">
             <div className="callus-container d-flex gap-3">
               <div className="call-icon">
@@ -33,10 +44,20 @@ const Consultation = () => {
               <button className="contact-btn">Contact Us</button>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Request a Consulation */}
-        <div className="request-consultation shadow py-5 px-3">
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ x: 100, opacity: 0.2 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { delay: 0.3, duration: 0.2 },
+            type: "spring",
+          }}
+          className="request-consultation shadow py-5 px-3"
+        >
           <h2 className="text-center">Request a Consultation</h2>
           <form>
             <div className="container-fluid">
@@ -143,7 +164,10 @@ const Consultation = () => {
                   </div>
 
                   <div className="d-flex justify-content-center align-items-center">
-                    <button type="submit" className="submit-btn btn btn-primary mt-5 rounded-0">
+                    <button
+                      type="submit"
+                      className="submit-btn btn btn-primary mt-5 rounded-0"
+                    >
                       Submit
                     </button>
                   </div>
@@ -151,7 +175,7 @@ const Consultation = () => {
               </div>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </>
   );

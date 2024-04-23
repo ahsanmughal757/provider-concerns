@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "next/link";
+
+import { motion } from "framer-motion";
 
 const WhatMakesDifferent = () => {
   return (
@@ -10,7 +11,17 @@ const WhatMakesDifferent = () => {
           <h2>What Makes Us Different?</h2>
         </div>
 
-        <div className="row justify-content-center">
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ scale: 0.2, y: -100 }}
+          whileInView={{
+            scale: 1,
+            y: 0,
+            transition: { duration: 0.3, stiffness: 10 },
+            type: "spring",
+          }}
+          className="row justify-content-center"
+        >
           <div className="col-sm-6 col-lg-3">
             <div className="difference-item bg">
               <div className="service-front">
@@ -58,7 +69,7 @@ const WhatMakesDifferent = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

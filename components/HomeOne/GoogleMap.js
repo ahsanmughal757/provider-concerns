@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+
 
 const GoogleMap = () => {
+
   return (
     <>
       <div id="contact" className="map-area container mb-5">

@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 const HeroSlider = () => {
   return (
     <>
@@ -33,18 +35,59 @@ const HeroSlider = () => {
                       />
                     </div>
 
-                    <h1>Empowering Practices Optimizing Revenues</h1>
-                    <p>
+                    <motion.h1
+                      initial={{ x: -30, opacity: 0 }}
+                      whileInView={{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                          duration: 0.3,
+                          delay: 0.3,
+                          ease: "easeIn",
+                        },
+                        type: "spring",
+                      }}
+                    >
+                      Empowering Practices Optimizing Revenues
+                    </motion.h1>
+                    <motion.p
+                      initial={{ x: 30, opacity: 0 }}
+                      whileInView={{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                          duration: 0.3,
+                          delay: 0.3,
+                          ease: "easeIn",
+                        },
+                        type: "spring",
+                      }}
+                    >
                       We provide Top Notch Healthcare financial billing
                       solutions that maximize your revenue
-                    </p>
+                    </motion.p>
 
-                    <div className="common-btn">
-                      <Link href="/appointment" className="click-call">Click to Call</Link>
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: {
+                          duration: 0.3,
+                          delay: 0.3,
+                          // ease: "easeIn",
+                        },
+                        type: "spring",
+                        // stiffness: 100,
+                      }}
+                      className="common-btn"
+                    >
+                      <Link href="/appointment" className="click-call">
+                        Click to Call
+                      </Link>
                       <Link href="/about" className="cmn-btn-right">
                         Make Appointment
                       </Link>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 const Services = () => {
+
   return (
     <>
-      <div id="services" className="services-area pb-70">
+      <div id="services" className="services-area pb-70 overflow-hidden">
         <div className="container">
           <div className="section-title">
             <h2>Our Services</h2>
@@ -12,7 +15,16 @@ const Services = () => {
 
           <div className="row justify-content-center">
             <div className="col-sm-12 col-md-12 col-lg-4">
-              <div className="service-item">
+              <motion.div
+                viewport={{ once: true }}
+                initial={{ x: -400, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: { duration: 0.6, delay: 0.2 },
+                }}
+                className="service-item"
+              >
                 <div className="service-front">
                   <i className="icofont-doctor"></i>
                   <Link href="/service-details">
@@ -23,9 +35,18 @@ const Services = () => {
                     services provided are eligible for reimbursement.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="service-item">
+              <motion.div
+                viewport={{ once: true }}
+                initial={{ x: -400, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: { duration: 0.6, delay: 0.2 },
+                }}
+                className="service-item"
+              >
                 <div className="service-front">
                   <i className="icofont-prescription"></i>
                   <Link href="/service-details">
@@ -36,10 +57,18 @@ const Services = () => {
                     privacy and security standards such as HIPAA.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-
-              <div className="service-item">
+              <motion.div
+                viewport={{ once: true }}
+                initial={{ x: -400, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: { duration: 0.6, delay: 0.2 },
+                }}
+                className="service-item"
+              >
                 <div className="service-front">
                   <i className="icofont-patient-file"></i>
                   <Link href="/service-details">
@@ -50,16 +79,34 @@ const Services = () => {
                     insurance claims for healthcare services provided.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Doctor Image */}
-            <div className="col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center align-items-center">
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ scale: 0.4, opacity: 0.2 }}
+              whileInView={{
+                scale: 1,
+                opacity: 1,
+                transition: { duration: 0.6, delay: 0.2 },
+              }}
+              className="col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center align-items-center"
+            >
               <img src="/images/doctor-image.png" alt="Image" />
-            </div>
+            </motion.div>
 
             <div className="col-sm-12 col-md-12 col-lg-4">
-              <div className="service-item">
+              <motion.div
+                viewport={{ once: true }}
+                initial={{ x: 400, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: { duration: 0.6, delay: 0.2 },
+                }}
+                className="service-item"
+              >
                 <div className="service-front">
                   <i className="icofont-tooth"></i>
                   <Link href="/service-details">
@@ -70,9 +117,18 @@ const Services = () => {
                     healthcare costs.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="service-item">
+              <motion.div
+                viewport={{ once: true }}
+                initial={{ x: 400, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: { duration: 0.6, delay: 0.2 },
+                }}
+                className="service-item"
+              >
                 <div className="service-front">
                   <i className="icofont-heart-beat-alt"></i>
                   <Link href="/service-details">
@@ -83,9 +139,18 @@ const Services = () => {
                     maximize reimbursement.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="service-item">
+              <motion.div
+                viewport={{ once: true }}
+                initial={{ x: 400, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: { duration: 0.6, delay: 0.2 },
+                }}
+                className="service-item"
+              >
                 <div className="service-front">
                   <i className="icofont-drug"></i>
                   <Link href="/service-details">
@@ -97,10 +162,8 @@ const Services = () => {
                     services.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
-
-            
 
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
               <div className="d-flex justify-content-center">

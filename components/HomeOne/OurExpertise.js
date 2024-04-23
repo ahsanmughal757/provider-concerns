@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const OurExpertise = () => {
   return (
@@ -12,65 +13,153 @@ const OurExpertise = () => {
 
           <div className="row align-items-center">
             {/* <div className="col-lg-12"> */}
-              <div className="expertise-item">
-                <div className="row">
-                  <div className="col-sm-12 col-lg-6">
-                    <div className="expertise-inner">
-                      <i className="icofont-doctor-alt"></i>
-                      <h3>
-                        <Link href="/doctor-details">
-                          HIPAA-Compliant Security Measures
-                        </Link>
-                      </h3>
-                      <p>
-                        Ensuring data integrity and confidentiality with robust
-                        HIPAA-compliant security measures.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-lg-6">
-                    <div className="expertise-inner">
-                      <i className="icofont-stretcher"></i>
-                      <h3>
-                        <Link href="/doctor-details">
-                          Transparent Revenue Cycle
-                        </Link>
-                      </h3>
-                      <p>
-                        Providing clarity and insight into your financial health
-                        through transparent revenue cycle management
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-lg-6">
-                    <div className="expertise-inner">
-                      <i className="icofont-network"></i>
-                      <h3>
-                        <Link href="/doctor-details">
-                          Customized Reporting and Analytics
-                        </Link>
-                      </h3>
-                      <p>
-                        Tailored insights are at your fingertips with our
-                        personalized reporting and analytics solutions for
-                        informed decision-making
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-lg-6">
-                    <div className="expertise-inner">
-                      <i className="icofont-ambulance-cross"></i>
-                      <h3>
-                        <Link href="/doctor-details">Integration with EHR</Link>
-                      </h3>
-                      <p>
-                        Seamless workflow integration with Electronic Health
-                        Records (EHR) for enhanced collaboration and
-                        comprehensive patient care.
-                      </p>
-                    </div>
+            <div className="expertise-item">
+              <div className="row">
+                <div className="col-sm-12 col-lg-3">
+                  <div className="expertise-inner">
+                    <motion.i
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                      className="icofont-doctor-alt"
+                    ></motion.i>
+                    <motion.h3
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      <Link href="/doctor-details">
+                        HIPAA-Compliant Security Measures
+                      </Link>
+                    </motion.h3>
+                    <motion.p
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      Ensuring data integrity and confidentiality with robust
+                      HIPAA-compliant security measures.
+                    </motion.p>
                   </div>
                 </div>
+                <div className="col-sm-12 col-lg-3">
+                  <div className="expertise-inner">
+                    <motion.i
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                      className="icofont-stretcher"
+                    ></motion.i>
+                    <motion.h3
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      <Link href="/doctor-details">
+                        Transparent Revenue Cycle
+                      </Link>
+                    </motion.h3>
+                    <motion.p
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      Providing clarity and insight into your financial health
+                      through transparent revenue cycle management
+                    </motion.p>
+                  </div>
+                </div>
+                <div className="col-sm-12 col-lg-3">
+                  <div className="expertise-inner">
+                    <motion.i
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                      className="icofont-network"
+                    ></motion.i>
+                    <motion.h3
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      <Link href="/doctor-details">
+                        Customized Reporting and Analytics
+                      </Link>
+                    </motion.h3>
+                    <motion.p
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      Tailored insights are at your fingertips with our
+                      personalized reporting and analytics solutions for
+                      informed decision-making
+                    </motion.p>
+                  </div>
+                </div>
+                <div className="col-sm-12 col-lg-3">
+                  <div className="expertise-inner">
+                    <motion.i
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                      className="icofont-ambulance-cross"
+                    ></motion.i>
+                    <motion.h3
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      <Link href="/doctor-details">Integration with EHR</Link>
+                    </motion.h3>
+                    <motion.p
+                      viewport={{ once: true }}
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: { duration: 0.5, delay: 0.2 },
+                      }}
+                    >
+                      Seamless workflow integration with Electronic Health
+                      Records (EHR) for enhanced collaboration and comprehensive
+                      patient care.
+                    </motion.p>
+                  </div>
+                </div>
+              </div>
               {/* </div> */}
             </div>
 

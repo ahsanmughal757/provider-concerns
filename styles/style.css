@@ -612,6 +612,7 @@ button:focus {
 .home-slider .swiper-button-prev,
 .home-slider .swiper-button-next {
   width: 55px;
+  z-index: 0;
   height: 55px;
   line-height: 55px;
   border-radius: 50%;
@@ -775,7 +776,7 @@ button:focus {
 .counter-item h3 {
   font-weight: 700;
   font-size: 48px;
-  color: #0046c0;
+  color: #0088cc;
   margin-bottom: 8px;
 }
 .counter-item p {
@@ -815,7 +816,7 @@ button:focus {
   display: block;
   width: 100px;
   height: 5px;
-  background-color: #0046c0;
+  background-color: #0088cc;
   border-radius: 5px;
   margin-top: 10px;
 }
@@ -842,7 +843,7 @@ button:focus {
 .about-item ul li i {
   display: inline-block;
   margin-right: 10px;
-  color: #0046c0;
+  color: #0088cc;
   font-size: 23px;
   position: relative;
   top: 2px;
@@ -851,7 +852,7 @@ button:focus {
   display: inline-block;
   font-size: 15px;
   color: #ffffff;
-  background-color: #0046c0;
+  background-color: #0088cc;
   font-weight: 500;
   padding: 20px 45px;
   border-radius: 5px;
@@ -886,7 +887,7 @@ button:focus {
   border-radius: 10px;
   z-index: -1;
   animation: a-one 5s infinite linear;
-  background-color: #0046c0;
+  background-color: #112142;
 }
 .about-left:after {
   position: absolute;
@@ -898,7 +899,7 @@ button:focus {
   border-radius: 10px;
   z-index: -1;
   animation: a-two 5s infinite linear;
-  background-color: #0046c0;
+  background-color: #112142;
 }
 
 @keyframes a-one {
@@ -967,7 +968,7 @@ button:focus {
   bottom: 0;
   width: 80px;
   height: 5px;
-  background-color: #0046c0;
+  background-color: #0088cc;
   border-radius: 5px;
 }
 
@@ -1042,7 +1043,7 @@ button:focus {
   color: #fff;
 }
 .expertise-item .expertise-inner {
-  background-color: #0046c0;
+  background-color: #112142;
   padding: 42px 25px 35px 25px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -1059,7 +1060,7 @@ button:focus {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  color: #0046c0;
+  color: #112142;
   font-size: 30px;
   margin-bottom: 35px;
   box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.6509803922);

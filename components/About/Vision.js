@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Vision = () => {
   return (
@@ -14,7 +15,18 @@ const Vision = () => {
               </div>
             </div>
 
-            <div className="col-lg-6">
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ scale: 0.2, x: 300, y: 100 }}
+              whileInView={{
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.3, stiffness: 10 },
+                type: "spring",
+              }}
+              className="col-lg-6"
+            >
               <div className="about-item about-right">
                 <img src="/images/about-shape1.png" alt="About" />
                 <h2>Vision</h2>
@@ -41,7 +53,7 @@ const Vision = () => {
                   full attention to delivering exceptional patient care.{" "}
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

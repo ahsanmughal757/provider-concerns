@@ -1,17 +1,30 @@
 import React from "react";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 const AboutContent = () => {
   return (
     <>
-      <div className="about-area pt-5 pb-70">
+      <div className="about-area pt-5 pb-70 overflow-hidden">
         <div className="container">
           <div className="about-heading d-flex justify-content-center align-items-centers mt-3 mb-5 pb-5">
             <h1>About</h1>
           </div>
 
           <div className="row mt-5 gx-5 align-items-center">
-            <div className="col-lg-6">
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ scale: 0.2, x: -300, y: 100 }}
+              animate={{
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.3, stiffness: 10 },
+                type: "spring",
+              }}
+              className="col-lg-6"
+            >
               <div className="about-item about-right">
                 <img src="/images/about-shape1.png" alt="About" />
                 <h2>Provider Concerns Solutions</h2>
@@ -38,7 +51,7 @@ const AboutContent = () => {
 
                 <Link href="/request-consultation">Request a Consultation</Link>
               </div>
-            </div>
+            </motion.div>
 
             <div className="col-lg-6">
               <div className="about-item">

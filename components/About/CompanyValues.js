@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "next/link";
+
+import { motion } from "framer-motion";
 
 const CompanyValues = () => {
   return (
@@ -11,7 +12,17 @@ const CompanyValues = () => {
         </div>
 
         <div className="row justify-content-start">
-          <div className="col-sm-6 col-lg-6">
+          <motion.div
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -300 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.3, stiffness: 10 },
+              type: "spring",
+            }}
+            className="col-sm-6 col-lg-6"
+          >
             <div className="values-item bg">
               <div className="service-front">
                 <i class="icofont-win-trophy"></i>
@@ -23,9 +34,19 @@ const CompanyValues = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="col-sm-6 col-lg-6">
+          <motion.div
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -300 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.3, stiffness: 10 },
+              type: "spring",
+            }}
+            className="col-sm-6 col-lg-6"
+          >
             <div className="values-item bg">
               <div className="service-front">
                 <i class="icofont-people"></i>
@@ -38,9 +59,19 @@ const CompanyValues = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="col-sm-6 col-lg-6">
+          <motion.div
+            viewport={{ once: true }}
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.3, stiffness: 10 },
+              type: "spring",
+            }}
+            className="col-sm-6 col-lg-6"
+          >
             <div className="values-item bg">
               <div className="service-front">
                 <i class="icofont-unique-idea"></i>
@@ -52,9 +83,16 @@ const CompanyValues = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="col-sm-6 col-lg-6">
+          <motion.div viewport={{ once: true }}
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.3, stiffness: 10 },
+              type: "spring",
+            }} className="col-sm-6 col-lg-6">
             <div className="values-item bg">
               <div className="service-front">
                 <i class="icofont-bulb-alt"></i>
@@ -66,7 +104,7 @@ const CompanyValues = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

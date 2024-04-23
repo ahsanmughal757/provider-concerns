@@ -1,16 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const LatestBlogPost = () => {
   return (
     <>
-      <div id="blogs" className="blog-area pt-100 pb-70">
+      <div id="blogs" className="blog-area pt-100 pb-70 overflow-hidden">
         <div className="container">
           <div className="section-title">
             <h2>Our Latest Blogs</h2>
           </div>
 
-          <div className="row justify-content-center">
+          <motion.div
+            viewport={{ once: true }}
+            initial={{ x: 400 }}
+            whileInView={{ x: 0, transition: { duration: 0.4, delay: 0.2 } }}
+            className="row justify-content-center"
+          >
             <div className="col-md-6 col-lg-4">
               <div className="blog-item">
                 <div className="blog-top">
@@ -106,7 +112,7 @@ const LatestBlogPost = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

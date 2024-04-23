@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Mission = () => {
   return (
@@ -6,7 +7,18 @@ const Mission = () => {
       <div className="about-area pt-100 pb-70">
         <div className="container">
           <div className="row gx-5 align-items-center">
-            <div className="col-lg-6">
+            <motion.div
+              viewport={{ once: true }}
+              initial={{ scale: 0.2, x: -300, y: 100 }}
+              whileInView={{
+                scale: 1,
+                x: 0,
+                y: 0,
+                transition: { duration: 0.3, stiffness: 10 },
+                type: "spring",
+              }}
+              className="col-lg-6"
+            >
               <div className="about-item about-right">
                 <img src="/images/about-shape1.png" alt="About" />
                 <h2>Mission</h2>
@@ -27,7 +39,7 @@ const Mission = () => {
                   with confidence.{" "}
                 </p>
               </div>
-            </div>
+            </motion.div>
             <div className="col-lg-6">
               <div className="">
                 <div className="">
