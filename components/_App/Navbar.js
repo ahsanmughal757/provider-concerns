@@ -119,6 +119,18 @@ const Navbar = () => {
                       Contact Us
                     </Link>
                   </li>
+                  <li className="schedule-container">
+                    <Link
+                      href="#contact"
+                      className={`btn schedule-btn nav-link ml-5${
+                        currentPath == "/blog/" && "active"
+                      }`}
+                    >
+                      {/* <button type="button" className="btn schedule-btn"> */}
+                      Schedule demo
+                      {/* </button> */}
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
@@ -137,9 +149,13 @@ const Navbar = () => {
                 </form>
               </div> */}
 
-              <button type="button" className="btn schedule-btn">
-                Schedule demo
-              </button>
+              {/* <div className="row d-flex justify-content-center align-items-center">
+                <div className="col-lg-3 col-sm-12">
+                  <button type="button" className="btn schedule-btn">
+                    Schedule demo
+                  </button>
+                </div>
+              </div> */}
             </nav>
           </div>
         </div>

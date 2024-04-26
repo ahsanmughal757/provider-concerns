@@ -9,7 +9,7 @@ const Mission = () => {
           <div className="row gx-5 align-items-center">
             <motion.div
               viewport={{ once: true }}
-              initial={{ scale: 0.2, x: -300, y: 100 }}
+              initial={{ scale: 0.2, x: 300, y: 100 }}
               whileInView={{
                 scale: 1,
                 x: 0,

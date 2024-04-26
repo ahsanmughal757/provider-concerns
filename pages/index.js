@@ -11,6 +11,7 @@ import NewsletterForm from "../components/Common/NewsletterForm";
 import Footer from "../components/_App/Footer";
 import Consultation from "../components/HomeOne/Consultation";
 import GoogleMap from "../components/HomeOne/GoogleMap";
+import Benefits from "../components/HomeOne/Benefits";
 
 const Index = () => {
   return (
@@ -30,6 +31,8 @@ const Index = () => {
       <Services />
 
       <OurExpertise />
+
+      <Benefits />
 
       {/* <VideoIntro /> */}
 

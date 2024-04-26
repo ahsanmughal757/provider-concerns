@@ -351,16 +351,23 @@ button:focus {
 }
 
 /* Schedule Demo Button - START */
+
+.schedule-container {
+  position: relative;
+  right: -60px;
+  margin-right: 50px;
+}
+
 .schedule-btn {
   background-color: #fd5f00;
-  border-radius: 0;
+  border-radius: 5px;
   color: white;
   transition: background-color 0.3s;
   text-transform: uppercase;
 }
 .schedule-btn:hover {
   background-color: #337ab7;
-  border-radius: 0;
+  border-radius: 5px;
   color: white;
 }
 /* Schedule Demo Button - END */
@@ -391,7 +398,7 @@ button:focus {
 .main-nav nav .navbar-nav .nav-item a:hover,
 .main-nav nav .navbar-nav .nav-item a:focus,
 .main-nav nav .navbar-nav .nav-item a.active {
-  color: #0046c0;
+  color: #0088CC;
 }
 
 .search-icon {
@@ -527,7 +534,7 @@ button:focus {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #0088;
+  background-color: #0818395b;
   opacity: 0.72;
 }
 .slider-item .slider-text {
@@ -572,7 +579,7 @@ button:focus {
   margin-right: 0;
 }
 .common-btn .cmn-btn-right {
-  border-radius: 0;
+  border-radius: 5px;
   background-color: #0088cc;
   color: #ffffff;
   border: none;
@@ -588,7 +595,7 @@ button:focus {
 
 .click-call {
   border: none !important;
-  border-radius: 0 !important;
+  border-radius: 5px !important;
   background-color: #081839 !important;
   color: #ffffff !important;
 }
@@ -616,7 +623,8 @@ button:focus {
   height: 55px;
   line-height: 55px;
   border-radius: 50%;
-  background-color: #2459b8;
+  z-index: 100;
+  background-color: #0088CC;
   transition: 0.5s all ease;
 }
 .home-slider .swiper-button-prev::after,
@@ -636,7 +644,7 @@ button:focus {
   width: 20px;
   height: 5px;
   margin: 5px 4px;
-  background-color: #0046c0;
+  background-color: #0088CC;
   transition: 0.5s all ease;
   opacity: 1;
   border-radius: 30px;
@@ -677,7 +685,7 @@ button:focus {
 .call-us::before {
   position: absolute;
   content: "";
-  background-color: #081839;
+  background-color: #112142;
   opacity: 0.9;
   width: 100%;
   height: 100%;
@@ -711,7 +719,7 @@ button:focus {
   position: relative;
   background-color: transparent;
   color: #0088cc;
-  border-radius: 0;
+  border-radius: 5px;
   border: 1px solid #ffffff;
   padding: 10px 40px;
   width: 100%;
@@ -736,7 +744,7 @@ button:focus {
 .submit-btn {
   background-color: #112142;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 10px 20px;
   transition: 0.3s all ease;
 }
@@ -797,7 +805,7 @@ button:focus {
   display: block;
   width: 100px;
   height: 5px;
-  background-color: #0046c0;
+  background-color: #0088cc;
   border-radius: 5px;
   margin-top: 10px;
 }
@@ -865,7 +873,7 @@ button:focus {
 }
 .about-item a:hover {
   color: 15px;
-  background-color: #111111;
+  background-color: #fd5f00;
 }
 
 .about-left {
@@ -1025,7 +1033,8 @@ button:focus {
 }
 
 .more-services {
-  border-radius: 0;
+  border-radius: 5px;
+  background-color: #112142; 
 }
 
 .more-services:hover {
@@ -1125,6 +1134,50 @@ button:focus {
   }
 }
 /*-- End Expertise --*/
+
+/* Benefit Item Start*/
+
+.benefit-item {
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 25px 5px rgba(221, 221, 221, 0.7490196078);
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 250px;
+}
+
+
+.benefit-item .benefit-front {
+  transition: 0.5s all ease;
+  display: block;
+}
+.benefit-item .benefit-front svg {
+  display: block;
+  fill: #4d93e9;
+  font-size: 65px;
+  height: 50px;
+  width: 50px;
+  /* margin-bottom: 20px; */
+}
+
+.benefit-item .benefit-front h3 {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 12px;
+  transition: 0.3s all ease-out;
+}
+.benefit-item .benefit-front h3:hover {
+  color: #fd5f00;
+}
+.benefit-item .benefit-front p {
+  margin-bottom: 0;
+}
+
+/* Benefit Item End */
+
 /*-- Video --*/
 .video-area {
   background-image: url("/images/intro-video-bg.jpg");
@@ -1351,12 +1404,12 @@ button:focus {
 .blog-item .blog-bottom ul li {
   display: inline-block;
   list-style-type: none;
-  color: #0046c0;
+  color: #0088CC;
   font-weight: 500;
   font-size: 14px;
 }
 .blog-item .blog-bottom ul li i {
-  color: #0046c0;
+  color: #0088CC;
 }
 .blog-item .blog-bottom ul li:last-child {
   float: right;
@@ -1367,7 +1420,7 @@ button:focus {
 }
 .blog-item .blog-bottom ul li a {
   display: block;
-  color: #0046c0;
+  color: #0088CC;
   font-weight: 500;
   font-size: 15px;
 }
@@ -1412,7 +1465,7 @@ button:focus {
 .newsletter-item .newsletter-form .form-control {
   height: 75px;
   border-radius: 10px;
-  border: 1px solid #0046c0;
+  border: 1px solid #0088CC;
   padding-left: 25px;
   font-size: 18px;
 }
@@ -1434,12 +1487,12 @@ button:focus {
   top: 7px;
   right: 7px;
   color: #ffffff;
-  background-color: #0046c0;
+  background-color: #0088CC;
   transition: 0.5s all ease;
   opacity: 1;
 }
 .newsletter-item .newsletter-form .newsletter-btn:hover {
-  background-color: #111111;
+  background-color: #fd5f00;
 }
 .newsletter-item .newsletter-form .validation-danger {
   color: #dc3545;
@@ -1449,11 +1502,11 @@ button:focus {
 /*-- End Newsletter --*/
 /*-- Footer --*/
 footer {
-  background-image: url("/images/footer-bg.png");
+  /* background-image: url("/images/footer-bg.png");
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #0843aa;
+  background-repeat: no-repeat; */
+  background-color: #112142;
   position: relative;
 }
 
@@ -1582,7 +1635,7 @@ footer {
 /*-- End Footer --*/
 /*-- Copyright --*/
 .copyright-area {
-  background-color: #001230;
+  background-color: #112142;
 }
 .copyright-area .copyright-item {
   padding-top: 20px;
@@ -4000,7 +4053,7 @@ footer {
   transform: scale(1);
 }
 .go-top i {
-  background-color: #0046c0;
+  background-color: #0088cc;
   color: #ffffff;
   height: 50px;
   width: 50px;
@@ -4429,11 +4482,11 @@ footer {
 
 .map-content .contact-info div i {
   font-size: 20px;
-  color: #0046c0;
+  color: #0088CC;
 }
 
 .text-blue {
-  color: #0046c0;
+  color: #0088CC;
 }
 
 .faq-content {

@@ -1,9 +1,8 @@
-
 /* Customizations - START */
 
 @media only screen and (max-width: 1194px) {
   /* Start Consultation */
-  
+
   .consultation-container .call-us {
     display: none !important;
   }
@@ -11,7 +10,7 @@
   .consultation-container .call-us > * {
     display: none;
   }
-  
+
   .consultation-container .request-consultation {
     position: static;
     margin: 100px 0;
@@ -26,32 +25,26 @@
   }
 }
 
-
 /* Start Expertise */
 @media only screen and (max-width: 1240px) {
   .expertise-item .expertise-inner {
     height: 420px;
-  
-  }  
+  }
 }
 
 @media only screen and (max-width: 968px) {
   .expertise-item .expertise-inner {
     height: 350px;
-  
-  }  
+  }
 }
 
 @media only screen and (max-width: 572px) {
   .expertise-item .expertise-inner {
     height: 280px;
-  
-  }  
+  }
 }
 
 /* End Expertise */
-
-
 
 /* Customizations - END */
 
@@ -1450,6 +1443,13 @@
     margin-bottom: 30px;
   }
   /*----- End Home Five CSS -----*/
+
+  .schedule-container {
+    position: static;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+  }
   .main-nav nav .navbar-nav {
     border-top: 1px solid #eee;
     margin-top: 15px;

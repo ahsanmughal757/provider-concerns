@@ -1,13 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
 
 const Services = () => {
-
   return (
     <>
-      <div id="services" className="services-area pb-70 overflow-hidden">
+      <div id="services" className="services-area pb-70 overflow-x-hidden">
         <div className="container">
           <div className="section-title">
             <h2>Our Services</h2>
@@ -17,7 +16,10 @@ const Services = () => {
             <div className="col-sm-12 col-md-12 col-lg-4">
               <motion.div
                 viewport={{ once: true }}
-                initial={{ x: -400, opacity: 0 }}
+                initial={{
+                  x: [50, 30],
+                  opacity: 0,
+                }}
                 whileInView={{
                   x: 0,
                   opacity: 1,
@@ -39,7 +41,7 @@ const Services = () => {
 
               <motion.div
                 viewport={{ once: true }}
-                initial={{ x: -400, opacity: 0 }}
+                initial={{ x: [50, 30], opacity: 0 }}
                 whileInView={{
                   x: 0,
                   opacity: 1,
@@ -61,7 +63,7 @@ const Services = () => {
 
               <motion.div
                 viewport={{ once: true }}
-                initial={{ x: -400, opacity: 0 }}
+                initial={{ x: [50, 30], opacity: 0 }}
                 whileInView={{
                   x: 0,
                   opacity: 1,
@@ -99,7 +101,7 @@ const Services = () => {
             <div className="col-sm-12 col-md-12 col-lg-4">
               <motion.div
                 viewport={{ once: true }}
-                initial={{ x: 400, opacity: 0 }}
+                initial={{ x: [50, 30], opacity: 0 }}
                 whileInView={{
                   x: 0,
                   opacity: 1,
@@ -121,7 +123,7 @@ const Services = () => {
 
               <motion.div
                 viewport={{ once: true }}
-                initial={{ x: 400, opacity: 0 }}
+                initial={{ x: [50, 30], opacity: 0 }}
                 whileInView={{
                   x: 0,
                   opacity: 1,
@@ -143,7 +145,7 @@ const Services = () => {
 
               <motion.div
                 viewport={{ once: true }}
-                initial={{ x: 400, opacity: 0 }}
+                initial={{ x: [50, 30], opacity: 0 }}
                 whileInView={{
                   x: 0,
                   opacity: 1,

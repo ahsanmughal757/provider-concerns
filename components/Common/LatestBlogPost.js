@@ -13,8 +13,12 @@ const LatestBlogPost = () => {
 
           <motion.div
             viewport={{ once: true }}
-            initial={{ x: 400 }}
-            whileInView={{ x: 0, transition: { duration: 0.4, delay: 0.2 } }}
+            initial={{ x: [null, 50], opacity: 0 }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+              transition: { duration: 0.4, delay: 0.2 },
+            }}
             className="row justify-content-center"
           >
             <div className="col-md-6 col-lg-4">

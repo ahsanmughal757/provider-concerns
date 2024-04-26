@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Disin - Medical Health & Doctors React Template</title>
+        <title>Medical Billing Services - Provider Concerns Solutions</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       </Head>
 
       {children}
-
+      
       <GoTop scrollStepInPx="100" delayInMs="10.50" />
     </>
   );

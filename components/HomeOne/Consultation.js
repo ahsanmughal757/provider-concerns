@@ -8,7 +8,7 @@ const Consultation = () => {
         {/* Left Side Contact */}
         <motion.div
           viewport={{ once: true }}
-          initial={{ x: -100, opacity: 0.2 }}
+          initial={{ x: [-50, -30], opacity: 0.2 }}
           whileInView={{
             x: 0,
             opacity: 1,
@@ -49,7 +49,7 @@ const Consultation = () => {
         {/* Request a Consulation */}
         <motion.div
           viewport={{ once: true }}
-          initial={{ x: 100, opacity: 0.2 }}
+          initial={{ x: [50, 30], opacity: 0.2 }}
           whileInView={{
             x: 0,
             opacity: 1,
@@ -166,7 +166,7 @@ const Consultation = () => {
                   <div className="d-flex justify-content-center align-items-center">
                     <button
                       type="submit"
-                      className="submit-btn btn btn-primary mt-5 rounded-0"
+                      className="submit-btn btn btn-primary mt-5"
                     >
                       Submit
                     </button>

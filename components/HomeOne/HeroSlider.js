@@ -21,7 +21,7 @@ const HeroSlider = () => {
           <div
             className="slider-item"
             style={{
-              backgroundImage: `url(/images/home-one/home-slider-bg.jpg)`,
+              backgroundImage: `url(/images/home-one/bg-pc.jpg)`,
             }}
           >
             <div className="d-table">
@@ -30,7 +30,7 @@ const HeroSlider = () => {
                   <div className="slider-text">
                     <div className="slider-shape">
                       <img
-                        src="/images/home-one/home-slider1.png"
+                        src="/images/home-one/doctors-slide-1.png"
                         alt="Shape"
                       />
                     </div>
@@ -62,6 +62,7 @@ const HeroSlider = () => {
                         },
                         type: "spring",
                       }}
+                      className="lead"
                     >
                       We provide Top Notch Healthcare financial billing
                       solutions that maximize your revenue
@@ -95,11 +96,11 @@ const HeroSlider = () => {
           </div>
         </SwiperSlide>
 
-        {/* <SwiperSlide>
+        <SwiperSlide>
           <div
             className="slider-item"
             style={{
-              backgroundImage: `url(/images/home-one/home-slider-bg.jpg)`,
+              backgroundImage: `url(/images/home-one/bg-pc.jpg)`,
             }}
           >
             <div className="d-table">
@@ -136,7 +137,7 @@ const HeroSlider = () => {
           <div
             className="slider-item"
             style={{
-              backgroundImage: `url(/images/home-one/home-slider-bg.jpg)`,
+              backgroundImage: `url(/images/home-one/bg-pc.jpg)`,
             }}
           >
             <div className="d-table">
@@ -168,7 +169,7 @@ const HeroSlider = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide> */}
+        </SwiperSlide>
       </Swiper>
     </>
   );

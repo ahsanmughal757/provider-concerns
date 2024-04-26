@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const CompanyValues = () => {
   return (
-    <div className="services-area pb-70 mt-5">
+    <div className="services-area pb-70 mt-5 overflow-x-hidden">
       <div className="container">
         <div className="section-different d-flex flex-column justify-content-center align-items-center">
           {/* <span>Services</span> */}
