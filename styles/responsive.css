@@ -1,5 +1,31 @@
 /* Customizations - START */
 
+/* Slider Styles START */
+@media only screen and (max-width: 992px) {
+  .home-slider .swiper-pagination {
+    display: none;
+  }
+
+}
+@media only screen and (min-width: 992px) {
+  .swiper-button-prev {
+    display: none !important;
+  }
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .swiper-button-prev {
+    display: flex;
+  }
+  .swiper-button-next {
+    display: flex;
+  }
+}
+/* Slider Styles END */
+
+
 @media only screen and (max-width: 1194px) {
   /* Start Consultation */
 
@@ -131,7 +157,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    background-color: #0046c0;
+    background-color: #0818395b;
     opacity: 0.8;
   }
   .slider-item .slider-text {
@@ -2983,3 +3009,4 @@
     font-size: 20px;
   }
 } /*# sourceMappingURL=responsive.css.map */
+

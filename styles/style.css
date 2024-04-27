@@ -398,7 +398,7 @@ button:focus {
 .main-nav nav .navbar-nav .nav-item a:hover,
 .main-nav nav .navbar-nav .nav-item a:focus,
 .main-nav nav .navbar-nav .nav-item a.active {
-  color: #0088CC;
+  color: #0088cc;
 }
 
 .search-icon {
@@ -624,7 +624,7 @@ button:focus {
   line-height: 55px;
   border-radius: 50%;
   z-index: 100;
-  background-color: #0088CC;
+  background-color: #0088cc;
   transition: 0.5s all ease;
 }
 .home-slider .swiper-button-prev::after,
@@ -638,24 +638,59 @@ button:focus {
   background-color: #111111;
 }
 .home-slider .swiper-pagination {
-  bottom: 150px;
+  margin-right: 70px;
+  left: 0;
+  top: 100px;
 }
+.home-slider .swiper-pagination * {
+  position: relative;
+  left: 80vw !important;
+  top: 0;
+}
+
 .home-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 20px;
-  height: 5px;
-  margin: 5px 4px;
-  background-color: #0088CC;
+  display: list-item;
+  /* list-style: none; */
+  /* width: 20px;
+  height: 5px; */
+  cursor: pointer;
+
+  width: 100px;
+  margin: 50px 4px;
+  background-color: transparent;
   transition: 0.5s all ease;
   opacity: 1;
   border-radius: 30px;
 }
+
+.home-slider .swiper-pagination .swiper-pagination-bullet::before {
+  display: inline-flex;
+  content: "";
+  width: 20px;
+  height: 3px;
+  margin: 50px 10px;
+  background-color: white;
+  transition: 0.5s all ease;
+  opacity: 1;
+  border-radius: 30px;
+}
+.home-slider .swiper-pagination .swiper-pagination-bullet:hover {
+  color: #0088cc !important;
+}
+
 .home-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  width: 50px;
+}
+/* .home-slider
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active,
 .home-slider .swiper-pagination .swiper-pagination-bullet:hover {
-  background: #ffffff;
-  width: 30px;
-}
+  color: #0088cc;
+  background: none !important;
+  /* width: 30px; 
+} */
 
 .home-slider-five .swiper-pagination {
   bottom: 30px;
@@ -1034,7 +1069,7 @@ button:focus {
 
 .more-services {
   border-radius: 5px;
-  background-color: #112142; 
+  background-color: #112142;
 }
 
 .more-services:hover {
@@ -1147,7 +1182,6 @@ button:focus {
   padding-right: 15px;
   height: 250px;
 }
-
 
 .benefit-item .benefit-front {
   transition: 0.5s all ease;
@@ -1404,12 +1438,12 @@ button:focus {
 .blog-item .blog-bottom ul li {
   display: inline-block;
   list-style-type: none;
-  color: #0088CC;
+  color: #0088cc;
   font-weight: 500;
   font-size: 14px;
 }
 .blog-item .blog-bottom ul li i {
-  color: #0088CC;
+  color: #0088cc;
 }
 .blog-item .blog-bottom ul li:last-child {
   float: right;
@@ -1420,7 +1454,7 @@ button:focus {
 }
 .blog-item .blog-bottom ul li a {
   display: block;
-  color: #0088CC;
+  color: #0088cc;
   font-weight: 500;
   font-size: 15px;
 }
@@ -1465,7 +1499,7 @@ button:focus {
 .newsletter-item .newsletter-form .form-control {
   height: 75px;
   border-radius: 10px;
-  border: 1px solid #0088CC;
+  border: 1px solid #0088cc;
   padding-left: 25px;
   font-size: 18px;
 }
@@ -1487,7 +1521,7 @@ button:focus {
   top: 7px;
   right: 7px;
   color: #ffffff;
-  background-color: #0088CC;
+  background-color: #0088cc;
   transition: 0.5s all ease;
   opacity: 1;
 }
@@ -2433,7 +2467,6 @@ footer {
   box-shadow: 0px 5px 25px 5px rgba(221, 221, 221, 0.7490196078);
 }
 
-
 .values-item .service-front:hover a * {
   color: #fd5f00;
 }
@@ -2465,7 +2498,6 @@ footer {
 .values-item .service-front h3:hover {
   color: #fd5f00;
 }
-
 
 /*-- End About --*/
 /*-- Speciality --*/
@@ -4482,11 +4514,11 @@ footer {
 
 .map-content .contact-info div i {
   font-size: 20px;
-  color: #0088CC;
+  color: #0088cc;
 }
 
 .text-blue {
-  color: #0088CC;
+  color: #0088cc;
 }
 
 .faq-content {

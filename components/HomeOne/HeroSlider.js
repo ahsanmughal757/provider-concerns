@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, EffectFade } from "swiper";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
@@ -11,12 +11,17 @@ const HeroSlider = () => {
       <Swiper
         slidesPerView={1}
         navigation={true}
+        effect="fade"
         pagination={{
           clickable: true,
+          renderBullet: (index, className) => (
+            `<span class="text-white h5 ${className}">0${index + 1}</span>`
+          ),
         }}
-        modules={[Pagination, Navigation]}
-        className="home-slider"
-      >
+        modules={[Pagination, Navigation, EffectFade]}
+        className="home-slider relative"
+      > 
+
         <SwiperSlide>
           <div
             className="slider-item"
@@ -29,10 +34,10 @@ const HeroSlider = () => {
                 <div className="container">
                   <div className="slider-text">
                     <div className="slider-shape">
-                      <img
-                        src="/images/home-one/doctors-slide-1.png"
+                      {/* <img
+                        // src="/images/home-one/doctors-slide-1.png"
                         alt="Shape"
-                      />
+                      /> */}
                     </div>
 
                     <motion.h1
@@ -108,10 +113,10 @@ const HeroSlider = () => {
                 <div className="container">
                   <div className="slider-text">
                     <div className="slider-shape-two">
-                      <img
+                      {/* <img
                         src="/images/home-one/home-slider2.png"
                         alt="Shape"
-                      />
+                      /> */}
                     </div>
                     <h1>Caring Health is Important Than All</h1>
                     <p>
@@ -145,10 +150,10 @@ const HeroSlider = () => {
                 <div className="container">
                   <div className="slider-text">
                     <div className="slider-shape-three">
-                      <img
+                      {/* <img
                         src="/images/home-one/home-slider3.png"
                         alt="Shape"
-                      />
+                      /> */}
                     </div>
                     <h1>We Offer Highly Treatments</h1>
                     <p>
