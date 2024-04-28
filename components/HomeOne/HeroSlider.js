@@ -14,14 +14,12 @@ const HeroSlider = () => {
         effect="fade"
         pagination={{
           clickable: true,
-          renderBullet: (index, className) => (
-            `<span class="text-white h5 ${className}">0${index + 1}</span>`
-          ),
+          renderBullet: (index, className) =>
+            `<span class="text-white h5 ${className}">0${index + 1}</span>`,
         }}
         modules={[Pagination, Navigation, EffectFade]}
         className="home-slider relative"
-      > 
-
+      >
         <SwiperSlide>
           <div
             className="slider-item"
@@ -87,10 +85,8 @@ const HeroSlider = () => {
                       }}
                       className="common-btn"
                     >
-                      <Link href="/appointment" className="click-call">
-                        Click to Call
-                      </Link>
-                      <Link href="/about" className="cmn-btn-right">
+                      <Link href="tel:+14099347674​">Click to Call</Link>
+                      <Link href="#contact" className="cmn-btn-right">
                         Make Appointment
                       </Link>
                     </motion.div>
@@ -118,17 +114,17 @@ const HeroSlider = () => {
                         alt="Shape"
                       /> */}
                     </div>
-                    <h1>Caring Health is Important Than All</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
+                    <h1>Medical Practices Revenue Maximization</h1>
+                    <p className="lead">
+                      We provide professional medical billing services designed
+                      to maximize revenue for your medical business, enhancing
+                      your profit potential.
                     </p>
 
                     <div className="common-btn">
-                      <Link href="/appointment">Get Appointment</Link>
-                      <Link href="/about" className="cmn-btn-right">
-                        Learn More
+                      <Link href="tel:+14099347674​">Click to Call</Link>
+                      <Link href="#contact" className="cmn-btn-right">
+                        Make Appointment
                       </Link>
                     </div>
                   </div>
@@ -155,18 +151,18 @@ const HeroSlider = () => {
                         alt="Shape"
                       /> */}
                     </div>
-                    <h1>We Offer Highly Treatments</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Quis ipsum suspendisse ultrices gravida.
+                    <h1>Expert Dental Billing Services</h1>
+                    <p className="lead">
+                      We revolutionize dental practices by ensuring financial
+                      success through innovative billing solutions, optimizing
+                      billing procedures, and enhancing profits.
                     </p>
 
                     <div className="common-btn">
-                      <Link href="/appointment">Get Appointment</Link>
-                      
-                      <Link href="/about" className="cmn-btn-right">
-                        Learn More
+                      <Link href="tel:+14099347674​">Click to Call</Link>
+
+                      <Link href="#contact" className="cmn-btn-right">
+                        Make Appointment
                       </Link>
                     </div>
                   </div>
