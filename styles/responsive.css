@@ -14,6 +14,19 @@
   .swiper-button-next {
     display: none !important;
   }
+
+  .feedback-slider .swiper-button-prev {
+    display: flex !important;
+    background-color: #000000 !important;
+    width: 35px;
+    height: 35px; 
+  }
+  .feedback-slider .swiper-button-next {
+    display: flex !important;
+    background-color: #000000 !important;
+    width: 35px;
+    height: 35px; 
+  }
 }
 @media only screen and (min-width: 768px) {
   .swiper-button-prev {
@@ -24,6 +37,9 @@
   }
 }
 /* Slider Styles END */
+
+
+
 
 
 @media only screen and (max-width: 1194px) {

@@ -12,6 +12,7 @@ const TestimonialSlider = () => {
             modules={[Navigation]}
             className="feedback-slider"
           >
+          
             <SwiperSlide>
               <div className="feedback-item">
                 <div className="client-img">

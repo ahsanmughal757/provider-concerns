@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Consultation = () => {
   return (
     <>
-      <div className="consultation-container container d-flex gap-5 mt-70">
+      <div style={{marginBottom: '200px'}} className="consultation-container container d-flex gap-5 mt-70">
         {/* Left Side Contact */}
         <motion.div
           viewport={{ once: true }}

@@ -1170,6 +1170,70 @@ button:focus {
 }
 /*-- End Expertise --*/
 
+/* Specialities START */
+
+.speciality-item {
+  text-align: left;
+}
+.speciality-item a {
+  color: #fff;
+}
+
+.speciality-item .specialities-inner {
+  background-color: #ffffff !important;
+  box-shadow: 0px 2px 4px 0px rgba(221, 221, 221, 0.7490196078);
+  padding: 42px 25px 35px 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  height: fit-content;
+  transition: all 0.5s ease;
+}
+
+
+.speciality-item .specialities-inner:hover {
+  box-shadow: 0px 5px 25px 5px rgba(221, 221, 221, 0.7490196078);
+}
+
+
+.speciality-item .specialities-inner svg {
+  display: block;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border-radius: 50%; */
+  color: red;
+  font-size: 30px;
+  margin-bottom: 35px;
+  box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.6509803922);
+  background-color: #ffffff;
+  transition: 0.5s all ease;
+  position: relative;
+  top: 8px;
+}
+
+.speciality-item .specialities-inner h3 {
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.speciality-item .specialities-inner h3:hover {
+  color: #fd5f00;
+}
+
+.speciality-item .specialities-inner p {
+  margin-bottom: 0;
+  color: black;
+}
+
+/* Specialities END */
+
 /* Benefit Item Start*/
 
 .benefit-item {

@@ -9,6 +9,7 @@ import Mission from "../components/About/Mission";
 import GoogleMap from "../components/HomeOne/GoogleMap";
 import WhatMakesDifferent from "../components/About/WhatMakesDifferent";
 import CompanyValues from "../components/About/CompanyValues";
+import TestimonialSlider from "../components/Common/TestimonialSlider";
 
 const About = () => {
   return (
@@ -40,7 +41,7 @@ const About = () => {
 
       {/* <Services /> */}
 
-      {/* <TestimonialSlider /> */}
+      <TestimonialSlider />
 
       {/* <LatestBlogPost /> */}
 

@@ -12,6 +12,8 @@ import Footer from "../components/_App/Footer";
 import Consultation from "../components/HomeOne/Consultation";
 import GoogleMap from "../components/HomeOne/GoogleMap";
 import Benefits from "../components/HomeOne/Benefits";
+import Specialities from "../components/HomeOne/Specialities";
+import TestimonialSlider from "../components/Common/TestimonialSlider";
 
 const Index = () => {
   return (
@@ -32,7 +34,11 @@ const Index = () => {
 
       <OurExpertise />
 
+      <Specialities />
+
       <Benefits />
+
+      <TestimonialSlider />
 
       {/* <VideoIntro /> */}
 
