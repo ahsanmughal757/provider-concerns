@@ -117,9 +117,7 @@ const Benefits = () => {
 
             <div className="col-lg-7">
               <div className="about-item">
-                <div className="about-left">
-                  <img src="/images/about1.jpg" alt="About" />
-                </div>
+                  <img src="/images/benefit-img.png" alt="About" />
               </div>
             </div>
           </div>

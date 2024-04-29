@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
+import {motion} from 'framer-motion'
+
 const Specialities = () => {
   return (
     <div className="container">
-      <div className="speciality-item">
+      <motion.div initial={{opacity: 0}} viewport={{once: true}} whileInView={{ opacity: 1, transition: {delay: 0.2, duration: 0.5}}} className="speciality-item">
         <div className="row">
           <div className="section-title">
             <h2>Specialities</h2>
@@ -145,7 +147,7 @@ const Specialities = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

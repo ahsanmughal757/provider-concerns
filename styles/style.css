@@ -321,11 +321,14 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: auto;
+  /* margin-right: auto; */
+  margin-right: 0;
   margin-left: auto;
 }
+
 .main-nav nav .navbar-nav .nav-item a.nav-link {
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .main-nav nav .navbar-nav .nav-item:hover {
@@ -353,9 +356,10 @@ button:focus {
 /* Schedule Demo Button - START */
 
 .schedule-container {
-  position: relative;
-  right: -60px;
-  margin-right: 50px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-left: 32px !important;
 }
 
 .schedule-btn {
@@ -561,7 +565,7 @@ button:focus {
 
 .common-btn a {
   display: inline-block;
-  color: #0046c0;
+  color: #0088cc;
   background-color: #ffffff;
   font-size: 15px;
   font-weight: 500;
@@ -702,6 +706,7 @@ button:focus {
 /* Start Consultation Form  */
 .consultation-container {
   margin-top: 100px;
+  margin-bottom: 100px;
   z-index: 10;
   position: relative;
   max-height: 800px;
@@ -1031,10 +1036,17 @@ button:focus {
   transition: 0.5s all ease;
   display: block;
 }
-.service-item .service-front i {
-  display: block;
-  color: #4d93e9;
+
+.service-item .service-front .icon {
+  display: flex;
+  justify-content: center;
+}
+
+.service-item .service-front svg {
+  fill: #0088cc;
   font-size: 65px;
+  height: 1em;
+  width: 1em;
   margin-bottom: 20px;
 }
 
@@ -1204,7 +1216,7 @@ button:focus {
   margin-left: auto;
   margin-right: auto;
   /* border-radius: 50%; */
-  color: red;
+  fill: #0088cc;
   font-size: 30px;
   margin-bottom: 35px;
   box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.6509803922);
@@ -1254,7 +1266,7 @@ button:focus {
 }
 .benefit-item .benefit-front svg {
   display: block;
-  fill: #4d93e9;
+  fill: #0088cc;
   font-size: 65px;
   height: 50px;
   width: 50px;
@@ -2612,7 +2624,7 @@ footer {
   opacity: 0.8;
   top: 0;
   left: 0;
-  background-color: #0046c0;
+  background-color: #0088cc;
 }
 
 .main {

@@ -6,7 +6,17 @@
     display: none;
   }
 
+  .consultation-container {
+    margin-bottom: 400px;
+  }
 }
+
+@media only screen and (min-width: 1200px) {
+  .home-slider .swiper-pagination {
+    bottom: 20px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .swiper-button-prev {
     display: none !important;
@@ -27,6 +37,7 @@
     width: 35px;
     height: 35px; 
   }
+
 }
 @media only screen and (min-width: 768px) {
   .swiper-button-prev {
@@ -38,6 +49,21 @@
 }
 /* Slider Styles END */
 
+
+/* Navbar Start */
+@media only screen and (max-width: 1200px) {
+  .main-nav nav .navbar-nav .schedule-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: auto; */
+    margin-right: auto;
+    margin-left: auto !important;
+  }
+}
+
+
+/* Navbar End */
 
 
 

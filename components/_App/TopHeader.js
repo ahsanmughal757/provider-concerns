@@ -13,7 +13,7 @@ const TopHeader = () => {
                     <li>
                       <a
                         className="facebook-link"
-                        href="https://www.facebook.com/"
+                        href="https://www.facebook.com/profile.php?id=61554322354913&mibextid=gik2fB"
                         target="_blank"
                       >
                         <i className="icofont-facebook text-light"></i>
@@ -27,7 +27,7 @@ const TopHeader = () => {
                     <li>
                       <a
                         className="twitter-link"
-                        href="https://twitter.com/"
+                        href="https://x.com/ProviderConSol?t=qOy9dSQZMOHFEQbyIQ8TWw&s=09"
                         target="_blank"
                       >
                         <i className="icofont-twitter text-light"></i>
@@ -38,7 +38,7 @@ const TopHeader = () => {
                     <li>
                       <a
                         className="instagram-link"
-                        href="https://www.instagram.com/"
+                        href="https://www.instagram.com/providerconsol?igsh=eDd3Z2ZzNnd0bG10&utm_source=qr"
                         target="_blank"
                       >
                         <i className="icofont-instagram text-light"></i>
@@ -50,7 +50,7 @@ const TopHeader = () => {
                     <li>
                       <a
                         className="linkedin-link"
-                        href="https://www.linkedin.com/"
+                        href="https://www.linkedin.com/company/providerconcernssolutions/"
                         target="_blank"
                       >
                         <i className="icofont-linkedin text-light"></i>
@@ -69,20 +69,16 @@ const TopHeader = () => {
                     <li>
                       <a className="phone-link" href="tel:+07554332322">
                         <i className="icofont-ui-call text-light"></i>
-                        Call : +07 554 332 322
+                        Call : +1 (888) 285-2880  
                       </a>
                     </li>
                     <span className="vertical-separator p-0"></span>
                     <li>
-                      <a className="email-link" href="mailto:hello@disin.com">
+                      <a className="email-link" href="mailto:support@providerconcerns.com">
                         <i className="icofont-ui-message  text-light"></i>
-                        hello@disin.com
+                        support@providerconcerns.com
                       </a>
                     </li>
-                    {/* <li>
-                      <i className="icofont-location-pin"></i>
-                      210-27 Quadra, Canada
-                    </li> */}
                   </ul>
                 </div>
               </div>

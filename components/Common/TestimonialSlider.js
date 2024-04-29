@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
 const TestimonialSlider = () => {
   return (
@@ -9,7 +9,11 @@ const TestimonialSlider = () => {
         <div className="container">
           <Swiper
             navigation={true}
-            modules={[Navigation]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false
+            }}
+            modules={[Navigation, Autoplay]}
             className="feedback-slider"
           >
           

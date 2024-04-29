@@ -41,7 +41,7 @@ const Navbar = () => {
       <div id="navbar" className="navbar-area sticky-top">
         <div className="main-nav">
           <div className="container">
-            <nav className="navbar navbar-expand-md navbar-light">
+            <nav className="navbar navbar-expand-xl navbar-light">
               <Link href="/" className="navbar-brand">
                 <img
                   src="/images/pcs-logo.jpg"

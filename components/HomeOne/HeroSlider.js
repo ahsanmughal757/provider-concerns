@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, EffectFade } from "swiper";
+import { Pagination, Navigation, EffectFade, Autoplay } from "swiper";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
@@ -11,13 +11,17 @@ const HeroSlider = () => {
       <Swiper
         slidesPerView={1}
         navigation={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false
+        }}
         effect="fade"
         pagination={{
           clickable: true,
           renderBullet: (index, className) =>
             `<span class="text-white h5 ${className}">0${index + 1}</span>`,
         }}
-        modules={[Pagination, Navigation, EffectFade]}
+        modules={[Pagination, Navigation, EffectFade, Autoplay]}
         className="home-slider relative"
       >
         <SwiperSlide>
@@ -114,19 +118,57 @@ const HeroSlider = () => {
                         alt="Shape"
                       /> */}
                     </div>
-                    <h1>Medical Practices Revenue Maximization</h1>
-                    <p className="lead">
+                    <motion.h1
+                      initial={{ x: -30, opacity: 0 }}
+                      whileInView={{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                          duration: 0.3,
+                          delay: 0.3,
+                          ease: "easeIn",
+                        },
+                        type: "spring",
+                      }}
+                    >Medical Practices Revenue Maximization</motion.h1>
+                    <motion.p
+                      initial={{ x: 30, opacity: 0 }}
+                      whileInView={{
+                        x: 0,
+                        opacity: 1,
+                        transition: {
+                          duration: 0.3,
+                          delay: 0.3,
+                          ease: "easeIn",
+                        },
+                        type: "spring",
+                      }}
+                      className="lead"
+                    >
                       We provide professional medical billing services designed
                       to maximize revenue for your medical business, enhancing
                       your profit potential.
-                    </p>
+                    </motion.p>
 
-                    <div className="common-btn">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{
+                        scale: 1,
+                        transition: {
+                          duration: 0.3,
+                          delay: 0.3,
+                          // ease: "easeIn",
+                        },
+                        type: "spring",
+                        // stiffness: 100,
+                      }}
+                      className="common-btn"
+                    >
                       <Link href="tel:+14099347674​">Click to Call</Link>
                       <Link href="#contact" className="cmn-btn-right">
                         Make Appointment
                       </Link>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
