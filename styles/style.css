@@ -718,7 +718,7 @@ button:focus {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(72, 70, 70, 0.181);
+  background-color: #112144e2;
   width: 35%;
   height: 811px;
 }
@@ -726,7 +726,7 @@ button:focus {
 .call-us::before {
   position: absolute;
   content: "";
-  background-color: #112142;
+  background-color: #112144e2;
   opacity: 0.9;
   width: 100%;
   height: 100%;
@@ -2624,7 +2624,7 @@ footer {
   opacity: 0.8;
   top: 0;
   left: 0;
-  background-color: #0088cc;
+  background-color: #112144e2;
 }
 
 .main {

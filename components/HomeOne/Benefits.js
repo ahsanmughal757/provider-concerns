@@ -6,7 +6,7 @@ const Benefits = () => {
     <>
       <div className="about-area pt-5 pb-70 overflow-hidden">
         <div className="container">
-          <div className="about-heading d-flex mt-3 mb-5 pb-5">
+          <div style={{maxWidth: '600px'}} className="about-heading d-flex mt-3 mb-5 pb-5">
             <h1>Benefits of Working with Provider Concerns Solutions</h1>
           </div>
 

@@ -33,7 +33,7 @@ const Consultation = () => {
               </div>
               <div className="call-text text-light">
                 <h3 className="text-light m-0 fs-5">Call Us</h3>
-                <p className="m-0">+1 (403) 640 2994</p>
+                <p className="m-0">+1 (888) 285-2880</p>
               </div>
             </div>
             <div className="call-desc">
