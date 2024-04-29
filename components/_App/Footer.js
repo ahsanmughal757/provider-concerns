@@ -19,7 +19,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <i className="icofont-stock-mobile"></i>
-                      <a href="tel:+14099347674​">Call: +1 (409) 934 7674​</a>
+                      <a href="tel:+18882852880">Call:  +1 (888) 285-2880 </a>
                     </li>
                     <li>
                       <i className="icofont-location-pin"></i>

@@ -67,7 +67,7 @@ const TopHeader = () => {
                 <div className="header-top-left d-flex justify-content-end">
                   <ul>
                     <li>
-                      <a className="phone-link" href="tel:+07554332322">
+                      <a className="phone-link" href="tel:+18882852880">
                         <i className="icofont-ui-call text-light"></i>
                         Call : +1 (888) 285-2880  
                       </a>

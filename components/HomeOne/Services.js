@@ -30,7 +30,7 @@ const Services = () => {
                 <div className="service-front">
                   <svg
                     aria-hidden="true"
-                    class="e-font-icon-svg e-fas-head-side-mask"
+                    className="e-font-icon-svg e-fas-head-side-mask"
                     viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -59,7 +59,7 @@ const Services = () => {
                 <div className="service-front">
                   <svg
                     aria-hidden="true"
-                    class="e-font-icon-svg e-far-eye"
+                    className="e-font-icon-svg e-far-eye"
                     viewBox="0 0 576 512"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -88,7 +88,7 @@ const Services = () => {
                 <div className="service-front">
                   <svg
                     aria-hidden="true"
-                    class="e-font-icon-svg e-fas-heartbeat"
+                    className="e-font-icon-svg e-fas-heartbeat"
                     viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -133,7 +133,7 @@ const Services = () => {
                 <div className="service-front">
                   <svg
                     aria-hidden="true"
-                    class="e-font-icon-svg e-fas-brain"
+                    className="e-font-icon-svg e-fas-brain"
                     viewBox="0 0 576 512"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -162,7 +162,7 @@ const Services = () => {
                 <div className="service-front">
                   <svg
                     aria-hidden="true"
-                    class="e-font-icon-svg e-fas-stethoscope"
+                    className="e-font-icon-svg e-fas-stethoscope"
                     viewBox="0 0 512 512"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -192,7 +192,7 @@ const Services = () => {
                   <div className="icon">
                     <svg
                       aria-hidden="true"
-                      class="e-font-icon-svg e-fas-pills"
+                      className="e-font-icon-svg e-fas-pills"
                       viewBox="0 0 576 512"
                       xmlns="http://www.w3.org/2000/svg"
                     >
