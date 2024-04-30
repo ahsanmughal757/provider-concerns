@@ -1,7 +1,97 @@
 import React from "react";
+import {
+  Formik,
+  Form,
+  Field,
+  FormikProvider,
+  ErrorMessage,
+  useField,
+  useFormik,
+} from "formik";
+
+import * as Yup from "yup";
+
 import { motion } from "framer-motion";
 
+const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
+  const [field, meta] = useField(props);
+
+  // Show inline feedback if EITHER
+  // - the input is focused AND value is longer than 2 characters
+  // - or, the has been visited (touched === true)
+  const [didFocus, setDidFocus] = React.useState(false);
+  const handleFocus = () => setDidFocus(true);
+  const showFeedback =
+    (!!didFocus && field.value.trim().length > 2) || meta.touched;
+
+  return (
+    <div
+      className={` ${showFeedback ? (meta.error ? "invalid" : "valid") : ""}`}
+    >
+      <div className="d-flex align-items-center justify-content-between">
+        <label htmlFor={props.id}>{label}</label>{" "}
+        {showFeedback ? (
+          <div
+            id={`${props.id}-feedback`}
+            aria-live="polite"
+            className="feedback text-sm"
+          >
+            {meta.error ? meta.error : "✓"}
+          </div>
+        ) : null}
+      </div>
+      <input
+        {...props}
+        {...field}
+        aria-describedby={`${props.id}-feedback ${props.id}-help`}
+        onFocus={handleFocus}
+      />
+      <div className="text-xs" id={`${props.id}-help`} tabIndex="-1">
+        {helpText}
+      </div>
+    </div>
+  );
+};
+
 const Consultation = () => {
+  // const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+  const phoneRegExp =
+    /^\+?((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      monthlyBilling: "",
+      businessName: "",
+      phone: "",
+      providers: "",
+      totalAR: "",
+      message: "",
+    },
+    onSubmit: async (values) => {
+      await sleep(500);
+      alert(JSON.stringify(values, null, 2));
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .max(20, "Must be less  than 20 characters")
+        .required("Name is required")
+        .matches(/^[a-zA-Z0-9]+$/, "Alpha Numeric characters only allowed"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      businessName: Yup.string().required("Business Name is required"),
+      phone: Yup.string()
+        .matches(phoneRegExp, "Phone number is invalid")
+        .required("Phone is required"),
+      monthlyBilling: Yup.string().required("Monthly Billing is required"),
+      providers: Yup.string().required("Providers is required"),
+      totalAR: Yup.string().required("Total AR is required"),
+      message: Yup.string()
+    }),
+  });
+
   return (
     <>
       <div className="consultation-container container d-flex gap-5 mt-70">
@@ -59,122 +149,120 @@ const Consultation = () => {
           className="request-consultation shadow py-5 px-3"
         >
           <h2 className="text-center">Request a Consultation</h2>
-          <form>
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-sm-12 col-md-12 col-lg-6">
-                  <div className="form-group my-3">
-                    <label htmlFor="firstName" className="my-2">
-                      Name:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      placeholder=""
-                      name="firstName"
-                    />
+          <FormikProvider value={formik}>
+            <Form>
+              <div className="container-fluid">
+                <div className="row">
+                  <div className="col-sm-12 col-md-12 col-lg-6">
+                    <div className="form-group my-3">
+                      <TextInputLiveFeedback
+                        type="text"
+                        label="Name"
+                        className="form-control"
+                        id="name"
+                        placeholder=""
+                        name="name"
+                      />
+                    </div>
+                    <div className="form-group my-3">
+                      <TextInputLiveFeedback
+                        label="Email"
+                        type="text"
+                        className="form-control"
+                        id="email"
+                        placeholder=""
+                        name="email"
+                      />
+                    </div>
+                    <div className="form-group my-3">
+                      <TextInputLiveFeedback
+                        label="Monthly Billing"
+                        type="text"
+                        className="form-control"
+                        id="monthlyBilling"
+                        placeholder=""
+                        name="monthlyBilling"
+                      />
+                    </div>
                   </div>
-                  <div className="form-group my-3">
-                    <label htmlFor="firstName" className="my-2">
-                      Email:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      placeholder=""
-                      name="firstName"
-                    />
-                  </div>
-                  <div className="form-group my-3">
-                    <label htmlFor="firstName" className="my-2">
-                      Monthly Billing:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      placeholder=""
-                      name="firstName"
-                    />
-                  </div>
-                </div>
-                <div className="col-sm-12 col-md-12 col-lg-6">
-                  <div className="form-group my-3">
-                    <label htmlFor="firstName" className="my-2">
-                      Business Name:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      placeholder=""
-                      name="firstName"
-                    />
-                  </div>
-                  <div className="form-group my-3">
-                    <label htmlFor="firstName" className="my-2">
-                      Phone:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      placeholder=""
-                      name="firstName"
-                    />
-                  </div>
-                  <div className="form-group my-3">
-                    <label htmlFor="firstName" className="my-2">
-                      Providers:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      placeholder=""
-                      name="firstName"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-lg-12 col-md-12 col-sm-12">
-                  <div className="form-group mb-3">
-                    <label htmlFor="firstName" className="my-2">
-                      Total AR:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      placeholder=""
-                      name="firstName"
-                    />
-                  </div>
-                  <div className="form-outline">
-                    <label className="form-label" htmlFor="textAreaExample1">
-                      Your Message
-                    </label>
-                    <textarea
-                      className="form-control"
-                      id="textAreaExample1"
-                      rows="4"
-                    ></textarea>
+                  <div className="col-sm-12 col-md-12 col-lg-6">
+                    <div className="form-group my-3">
+                      <TextInputLiveFeedback
+                        type="text"
+                        label="Business Name"
+                        className="form-control"
+                        id="businessName"
+                        placeholder=""
+                        name="businessName"
+                      />
+                    </div>
+                    <div className="form-group my-3">
+                      <TextInputLiveFeedback
+                        type="tel"
+                        label="Phone"
+                        className="form-control"
+                        id="phone"
+                        placeholder=""
+                        name="phone"
+                      />
+                    </div>
+                    <div className="form-group my-3">
+                      <TextInputLiveFeedback
+                        type="text"
+                        label="Providers"
+                        className="form-control"
+                        id="providers"
+                        placeholder=""
+                        name="providers"
+                      />
+                    </div>
                   </div>
 
-                  <div className="d-flex justify-content-center align-items-center">
-                    <button
-                      type="submit"
-                      className="submit-btn btn btn-primary mt-5"
-                    >
-                      Submit
-                    </button>
+                  <div className="col-lg-12 col-md-12 col-sm-12">
+                    <div className="form-group mb-3">
+                      <TextInputLiveFeedback
+                        type="text"
+                        label="Total AR"
+                        className="form-control"
+                        id="totalAR"
+                        placeholder=""
+                        name="totalAR"
+                      />
+                    </div>
+                    <div className="form-outline">
+                      <label className="form-label" htmlFor="message">
+                        Your Message
+                      </label>
+                      <div className="d-flex justify-content-end">
+                        <ErrorMessage
+                          className="error"
+                          name="message"
+                          component="div"
+                        />
+                      </div>
+                      <Field
+                        as="textarea"
+                        label="Your Message"
+                        className="form-control"
+                        id="message"
+                        rows="4"
+                        name="message"
+                      />
+                    </div>
+
+                    <div className="d-flex justify-content-center align-items-center">
+                      <button
+                        type="submit"
+                        className="submit-btn btn btn-primary mt-5"
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </Form>
+          </FormikProvider>
         </motion.div>
       </div>
     </>

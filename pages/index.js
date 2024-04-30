@@ -44,7 +44,7 @@ const Index = () => {
 
       {/* <OurDoctors /> */}
 
-      <LatestBlogPost />
+      {/* <LatestBlogPost /> */}
 
       <GoogleMap />
 

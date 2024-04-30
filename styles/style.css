@@ -704,6 +704,34 @@ button:focus {
 /*-- End Home Slider --*/
 
 /* Start Consultation Form  */
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border: 2px solid #ff7d87;
+  box-shadow: none;
+}
+
+.invalid input[type='email'],
+.invalid input[type='text'],
+.invalid input[type='number'] {
+  border-color: red;
+}
+
+
+.invalid .feedback {
+  color: red;
+}
+
+.input-feedback {
+  color: red;
+  margin-top: 0.25rem;
+}
+
+.error {
+  color: red;
+}
+
 .consultation-container {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -1499,7 +1527,7 @@ button:focus {
   display: block;
 }
 .blog-item .blog-bottom h3 a:hover {
-  color: #0046c0;
+  color: #0088cc;
 }
 .blog-item .blog-bottom p {
   color: #232323;

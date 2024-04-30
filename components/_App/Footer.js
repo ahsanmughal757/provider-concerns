@@ -118,10 +118,10 @@ const Footer = () => {
         <div className="container">
           <div className="copyright-item">
             <p>
-              Copyright &copy; {currentYear} Design & Developed by{" "}
-              <a href="https://hibootstrap.com/" target="_blank">
+              Copyright &copy; {currentYear} Provider Concerns Solutions{" "}
+              {/* <a href="https://hibootstrap.com/" target="_blank">
                 HiBootstrap
-              </a>
+              </a> */}
             </p>
           </div>
         </div>
