@@ -18,17 +18,13 @@ import Layout from "../components/_App/Layout";
 
 import { useRouter } from "next/router";
 
-import { AnimatePresence } from "framer-motion";
-
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
   const pageKey = router.asPath;
 
   return (
     <Layout>
-      <AnimatePresence mode="popLayout">
         <Component key={pageKey} {...pageProps} />
-      </AnimatePresence>
     </Layout>
   );
 };

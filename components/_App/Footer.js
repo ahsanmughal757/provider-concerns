@@ -1,8 +1,78 @@
 import React from "react";
+import axios from "axios";
 import Link from "next/link";
+import {
+  Form,
+  Field,
+  FormikProvider,
+  ErrorMessage,
+  useFormik,
+} from "formik";
+import * as Yup from "yup";
+import Swal from "sweetalert2";
+import TextInputLiveFeedback from "../Forms/TextInputLiveFeedback";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  // Phone Number Validation
+  const phoneRegExp =
+    /^\+?((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+  // YUP Validation Schema
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .max(20, "Must be less  than 20 characters")
+      .required("Name is required")
+      .matches(/^[a-zA-Z0-9\s]+$/, "Alpha Numeric characters only allowed"),
+    phone: Yup.string()
+      .matches(phoneRegExp, "Phone number is invalid")
+      .required("Phone is required"),
+    email: Yup.string().email("Invalid email address").required("Email is required"),
+    message: Yup.string().required("Message is required"),
+  });
+
+  // Handle Form Submit
+  const handleSubmit = async (values) => {
+    // alert(JSON.stringify(values));
+    Swal.showLoading();
+    await axios
+      .post("/api/feedback", {
+        name: values.name,
+        phone: values.phone,
+        email: values.email,
+        message: values.message,
+      })
+      .then((res) => {
+        Swal.fire({
+          title: "Done",
+          text: "Feedback Submitted!",
+          icon: "success",
+        });
+
+        formik.resetForm();
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      });
+  };
+
+  // Formik Hook
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    },
+    onSubmit: handleSubmit,
+    validationSchema,
+  });
+
   return (
     <>
       <footer className="pt-100 pb-70">
@@ -15,11 +85,13 @@ const Footer = () => {
                   <ul>
                     <li>
                       <i className="icofont-ui-message"></i>
-                      <a href="mailto:support@providerconcerns.com">support@providerconcerns.com</a>
+                      <a href="mailto:support@providerconcerns.com">
+                        support@providerconcerns.com
+                      </a>
                     </li>
                     <li>
                       <i className="icofont-stock-mobile"></i>
-                      <a href="tel:+18882852880">Call:  +1 (888) 285-2880 </a>
+                      <a href="tel:+18882852880">Call: +1 (888) 285-2880 </a>
                     </li>
                     <li>
                       <i className="icofont-location-pin"></i>
@@ -39,13 +111,10 @@ const Footer = () => {
                       <Link href="/about">About us</Link>
                     </li>
                     <li>
-                      <Link href="/about">Services</Link>
+                      <Link href="#services">Services</Link>
                     </li>
                     <li>
-                      <Link href="/blog-details">Specialities</Link>
-                    </li>
-                    <li>
-                      <Link href="/faq">Blogs</Link>
+                      <Link href="/specialities">Specialities</Link>
                     </li>
                   </ul>
                 </div>
@@ -58,17 +127,20 @@ const Footer = () => {
                   <h3>Our Services</h3>
                   <ul>
                     <li>
-                      <Link href="/service-details">Medical Billing</Link>
+                      <Link href="/medical-billing">Medical Billing</Link>
                     </li>
                     <li>
-                      <Link href="/service-details">Laboratory Billing</Link>
+                      <Link href="/laboratory-billing">Laboratory Billing</Link>
                     </li>
                     <li>
-                      <Link href="/service-details">Physician Billing</Link>
+                      <Link href="/physical-billing">Physician Billing</Link>
                     </li>
                     <li>
-                      <Link href="/service-details">Hospital Billing</Link>
+                      <Link href="/hospital-billing">Hospital Billing</Link>
                     </li>
+                    {/* <li>
+                      <Link href="/dental-billing">Dentail Billing</Link>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -76,38 +148,55 @@ const Footer = () => {
 
             <div className="col-sm-6 col-lg-3">
               <div className="footer-item">
-                <div className="footer-feedback">
-                  <h3>Feedback</h3>
-                  <form>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Name"
-                      />
+                <FormikProvider value={formik}>
+                  <Form>
+                    <div className="footer-feedback">
+                      <h3>Feedback</h3>
+                      <div className="form-group">
+                        <TextInputLiveFeedback
+                          type="text"
+                          name="name"
+                          className="form-control"
+                          placeholder="Name"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <TextInputLiveFeedback
+                          type="email"
+                          name="email"
+                          className="form-control"
+                          placeholder="Email"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <TextInputLiveFeedback
+                          type="text"
+                          name="phone"
+                          className="form-control"
+                          placeholder="Phone"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <div className="d-flex justify-content-end">
+                          <ErrorMessage className="error" name="message" component="div" />
+                        </div>
+                        <Field
+                          className="form-control"
+                          id="message"
+                          name="message"
+                          rows="3"
+                          as="textarea"
+                          placeholder="Message"
+                        ></Field>
+                      </div>
+                      <div className="text-left">
+                        <button type="submit" className="btn feedback-btn">
+                          SUBMIT
+                        </button>
+                      </div>
                     </div>
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Phone"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <textarea
-                        className="form-control"
-                        id="your_message"
-                        rows="3"
-                        placeholder="Message"
-                      ></textarea>
-                    </div>
-                    <div className="text-left">
-                      <button type="submit" className="btn feedback-btn">
-                        SUBMIT
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                  </Form>
+                </FormikProvider>
               </div>
             </div>
           </div>

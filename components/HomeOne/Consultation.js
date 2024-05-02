@@ -1,95 +1,88 @@
 import React from "react";
+import axios from "axios";
 import {
-  Formik,
   Form,
   Field,
   FormikProvider,
   ErrorMessage,
-  useField,
   useFormik,
 } from "formik";
-
 import * as Yup from "yup";
-
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
 
-const TextInputLiveFeedback = ({ label, helpText, ...props }) => {
-  const [field, meta] = useField(props);
+import TextInputLiveFeedback from "../Forms/TextInputLiveFeedback";
 
-  // Show inline feedback if EITHER
-  // - the input is focused AND value is longer than 2 characters
-  // - or, the has been visited (touched === true)
-  const [didFocus, setDidFocus] = React.useState(false);
-  const handleFocus = () => setDidFocus(true);
-  const showFeedback =
-    (!!didFocus && field.value.trim().length > 2) || meta.touched;
-
-  return (
-    <div
-      className={` ${showFeedback ? (meta.error ? "invalid" : "valid") : ""}`}
-    >
-      <div className="d-flex align-items-center justify-content-between">
-        <label htmlFor={props.id}>{label}</label>{" "}
-        {showFeedback ? (
-          <div
-            id={`${props.id}-feedback`}
-            aria-live="polite"
-            className="feedback text-sm"
-          >
-            {meta.error ? meta.error : "✓"}
-          </div>
-        ) : null}
-      </div>
-      <input
-        {...props}
-        {...field}
-        aria-describedby={`${props.id}-feedback ${props.id}-help`}
-        onFocus={handleFocus}
-      />
-      <div className="text-xs" id={`${props.id}-help`} tabIndex="-1">
-        {helpText}
-      </div>
-    </div>
-  );
-};
 
 const Consultation = () => {
-  // const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+  // Phone Number Validation
   const phoneRegExp =
     /^\+?((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
 
+  // YUP Validation Schema
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .max(20, "Must be less  than 20 characters")
+      .required("Name is required")
+      // .matches(/^[a-zA-Z0-9]+$/, "Alpha Numeric characters only allowed"),
+      .matches(/^[a-zA-Z0-9\s]+$/, "Alpha Numeric characters only allowed"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    businessName: Yup.string().required("Business Name is required"),
+    phone: Yup.string()
+      .matches(phoneRegExp, "Phone number is invalid")
+      .required("Phone is required"),
+    monthlyBilling: Yup.string(),
+    providers: Yup.string(),
+    totalAR: Yup.string().required("Total AR is required"),
+    message: Yup.string(),
+  });
+
+  // Handle Form Submit
+  const handleSubmit = async (values) => {
+    // alert(JSON.stringify(values));
+    Swal.showLoading();
+    await axios
+      .post("/api/request-consultation", {
+        name: values.name,
+        email: values.email,
+        number: values.phone,
+        businessName: values.businessName,
+        text: values.message,
+      })
+      .then((res) => {
+        Swal.fire({
+          title: "Done",
+          text: "Email Sent Successfully!",
+          icon: "success",
+        });
+
+        formik.resetForm();
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      });
+  };
+
+  // Formik Hook
   const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
-      monthlyBilling: "",
+      monthlyBilling: "1k-30k",
       businessName: "",
       phone: "",
-      providers: "",
+      providers: "1-5",
       totalAR: "",
       message: "",
     },
-    onSubmit: async (values) => {
-      await sleep(500);
-      alert(JSON.stringify(values, null, 2));
-    },
-    validationSchema: Yup.object({
-      name: Yup.string()
-        .max(20, "Must be less  than 20 characters")
-        .required("Name is required")
-        .matches(/^[a-zA-Z0-9]+$/, "Alpha Numeric characters only allowed"),
-      email: Yup.string()
-        .email("Invalid email address")
-        .required("Email is required"),
-      businessName: Yup.string().required("Business Name is required"),
-      phone: Yup.string()
-        .matches(phoneRegExp, "Phone number is invalid")
-        .required("Phone is required"),
-      monthlyBilling: Yup.string().required("Monthly Billing is required"),
-      providers: Yup.string().required("Providers is required"),
-      totalAR: Yup.string().required("Total AR is required"),
-      message: Yup.string()
-    }),
+    onSubmit: handleSubmit,
+    validationSchema,
   });
 
   return (
@@ -175,14 +168,35 @@ const Consultation = () => {
                       />
                     </div>
                     <div className="form-group my-3">
-                      <TextInputLiveFeedback
+                      {/* <TextInputLiveFeedback
                         label="Monthly Billing"
                         type="text"
                         className="form-control"
                         id="monthlyBilling"
                         placeholder=""
                         name="monthlyBilling"
-                      />
+                      /> */}
+
+                      <div className="position-relative">
+                        <label htmlFor="monthlyBilling">Monthly Billing</label>
+
+                        <ErrorMessage
+                          className="error position-absolute end-0"
+                          name="monthlyBilling"
+                          component="span"
+                        />
+                      </div>
+                      <Field
+                        id="monthlyBilling"
+                        name="monthlyBilling"
+                        as="select"
+                        className="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1k-30k">1k-30k</option>
+                        <option value="Less than 1k">Less than 1k</option>
+                        <option value="None">None</option>
+                      </Field>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-12 col-lg-6">
@@ -207,14 +221,26 @@ const Consultation = () => {
                       />
                     </div>
                     <div className="form-group my-3">
-                      <TextInputLiveFeedback
-                        type="text"
-                        label="Providers"
-                        className="form-control"
+                      <div className="position-relative">
+                        <label htmlFor="providers">Providers</label>
+
+                        <ErrorMessage
+                          className="error position-absolute end-0"
+                          name="providers"
+                          component="span"
+                        />
+                      </div>
+                      <Field
                         id="providers"
-                        placeholder=""
                         name="providers"
-                      />
+                        as="select"
+                        className="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1-5">1-5</option>
+                        <option value="5-10">5-10</option>
+                        <option value="None">None</option>
+                      </Field>
                     </div>
                   </div>
 

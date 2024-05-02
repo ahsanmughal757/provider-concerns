@@ -103,11 +103,11 @@ const Navbar = () => {
                     </Link>
                   </li>
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link href="#blogs" className="nav-link">
                       Blogs
                     </Link>
-                  </li>
+                  </li> */}
 
                   <li className="nav-item">
                     <Link

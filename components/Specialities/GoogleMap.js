@@ -31,7 +31,7 @@ const GoogleMap = () => {
                   <i className="icofont-phone"></i>
                   <h5 className="text-blue">Our Contact</h5>
                 </div>
-                <p>+1 (409) 934 7674​</p>
+                <p>+1 (888) 285-2880​</p>
               </div>
 
               <div className="contact-info">

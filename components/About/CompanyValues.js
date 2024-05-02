@@ -25,7 +25,7 @@ const CompanyValues = () => {
           >
             <div className="values-item bg">
               <div className="service-front">
-                <i class="icofont-win-trophy"></i>
+                <i className="icofont-win-trophy"></i>
                 <h3>Proficiency</h3>
                 <p>
                   Our certified and highly trained team is proficient in the
@@ -49,7 +49,7 @@ const CompanyValues = () => {
           >
             <div className="values-item bg">
               <div className="service-front">
-                <i class="icofont-people"></i>
+                <i className="icofont-people"></i>
 
                 <h3>Variety</h3>
                 <p>
@@ -74,7 +74,7 @@ const CompanyValues = () => {
           >
             <div className="values-item bg">
               <div className="service-front">
-                <i class="icofont-unique-idea"></i>
+                <i className="icofont-unique-idea"></i>
                 <h3>Creativity</h3>
                 <p>
                   At PCS the administration is a force that always encourage
@@ -95,7 +95,7 @@ const CompanyValues = () => {
             }} className="col-sm-6 col-lg-6">
             <div className="values-item bg">
               <div className="service-front">
-                <i class="icofont-bulb-alt"></i>
+                <i className="icofont-bulb-alt"></i>
                 <h3>Innovation</h3>
                 <p>
                   Our company is well equipped with latest technology and

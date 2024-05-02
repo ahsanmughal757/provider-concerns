@@ -4099,6 +4099,27 @@ footer {
 /*----- END DEPARTMENTS PAGE -----*/
 /*----- SERVICES DETAILS PAGE -----*/
 /*-- Service Details --*/
+.service-details-area .service-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.service-details-area .service-heading h1 {
+  font-weight: 600;
+  font-size: 38px;
+  margin-bottom: 16px;
+}
+.service-details-area .service-heading h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #0088cc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 .services-details-img {
   margin-bottom: 50px;
 }
@@ -4110,6 +4131,15 @@ footer {
   font-weight: 600;
   font-size: 28px;
   margin-bottom: 16px;
+}
+.services-details-img h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #0088cc;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 .services-details-img P {
   margin-bottom: 20px;
