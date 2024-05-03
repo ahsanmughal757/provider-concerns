@@ -28,7 +28,7 @@ const HeroSlider = () => {
           <div
             className="slider-item"
             style={{
-              backgroundImage: `url(/images/home-one/bg-pc.jpg)`,
+              backgroundImage: `url(/images/home-one/home-slide-1.jpg)`,
             }}
           >
             <div className="d-table">
@@ -105,7 +105,7 @@ const HeroSlider = () => {
           <div
             className="slider-item"
             style={{
-              backgroundImage: `url(/images/home-one/bg-pc.jpg)`,
+              backgroundImage: `url(/images/home-one/home-slide-2.jpg)`,
             }}
           >
             <div className="d-table">
@@ -180,7 +180,7 @@ const HeroSlider = () => {
           <div
             className="slider-item"
             style={{
-              backgroundImage: `url(/images/home-one/bg-pc.jpg)`,
+              backgroundImage: `url(/images/home-one/home-slide-3.jpg)`,
             }}
           >
             <div className="d-table">

@@ -76,7 +76,7 @@ const Stats = () => {
               <div className="counter-item">
                 {/* <i className="icofont-badge"></i> */}
                 <h3 className="counter">
-                <CountUp start={0} end={80} delay={0} duration={4}>
+                  <CountUp start={0} end={80} delay={0} duration={4}>
                     {({ countUpRef }) => (
                       <>
                         <span ref={countUpRef}></span>

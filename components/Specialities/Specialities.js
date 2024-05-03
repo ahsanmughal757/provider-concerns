@@ -6,7 +6,7 @@ const Specialities = () => {
     <>
       <div className="services-area pb-70 mt-5">
         <div className="container">
-          <div className="section-title-two">
+          <div className="section-title-two d-flex justify-content-center">
             <h2>Specialities</h2>
           </div>
 

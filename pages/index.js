@@ -48,7 +48,7 @@ const Index = () => {
 
       <GoogleMap />
 
-      <NewsletterForm />
+      {/* <NewsletterForm /> */}
 
       <Footer />
     </>

@@ -538,7 +538,7 @@ button:focus {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #0818395b;
+  background-color: #0a1c42bf;
   opacity: 0.72;
 }
 .slider-item .slider-text {
@@ -787,7 +787,7 @@ textarea:invalid {
 .consultation-container .call-us .contact-btn {
   position: relative;
   background-color: transparent;
-  color: #0088cc;
+  color: #ffffff;
   border-radius: 5px;
   border: 1px solid #ffffff;
   padding: 10px 40px;
@@ -1091,9 +1091,14 @@ textarea:invalid {
   margin-bottom: 0;
 }
 .service-item.bg {
-  background-color: #f5f5f5;
-  box-shadow: none;
-  border-bottom: 2px solid #e7e7e7;
+  height: fit-content;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(221, 221, 221, 0.7490196078);
+  transition: all 0.5s ease;
+}
+.service-item.bg:hover {
+  
+  box-shadow: 0px 5px 25px 5px rgba(221, 221, 221, 0.7490196078);
 }
 .service-item.style-3 {
   background-color: #f5f5f5;
@@ -1966,7 +1971,7 @@ footer {
 }
 
 .section-title-two {
-  max-width: 430px;
+  width: 100%;
   margin-left: 0;
   margin-bottom: 40px;
   margin-top: -5px;
@@ -1990,7 +1995,7 @@ footer {
   content: "";
   width: 80px;
   height: 5px;
-  background-color: #0046c0;
+  background-color: #0088cc;
   border-radius: 5px;
 }
 
@@ -2508,7 +2513,7 @@ footer {
   content: "";
   width: 80px;
   height: 5px;
-  background-color: #0046c0;
+  background-color: #0088cc;
   border-radius: 5px;
 }
 
@@ -2533,7 +2538,7 @@ footer {
 }
 .difference-item .service-front i {
   display: block;
-  color: #4d93e9;
+  color: #0088cc;
   font-size: 65px;
   margin-bottom: 20px;
 }
@@ -2581,7 +2586,7 @@ footer {
 }
 .values-item .service-front i {
   display: block;
-  color: #4d93e9;
+  color: #0088cc;
   font-size: 40px;
   margin-bottom: 20px;
 }

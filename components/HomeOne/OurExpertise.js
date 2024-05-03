@@ -34,7 +34,7 @@ const OurExpertise = () => {
                         transition: { duration: 0.5, delay: 0.2 },
                       }}
                     >
-                      <Link href="/doctor-details">
+                      <Link href="#what-we-do">
                         HIPAA-Compliant Security Measures
                       </Link>
                     </motion.h3>
@@ -70,7 +70,7 @@ const OurExpertise = () => {
                         transition: { duration: 0.5, delay: 0.2 },
                       }}
                     >
-                      <Link href="/doctor-details">
+                      <Link href="#what-we-do">
                         Transparent Revenue Cycle
                       </Link>
                     </motion.h3>
@@ -106,7 +106,7 @@ const OurExpertise = () => {
                         transition: { duration: 0.5, delay: 0.2 },
                       }}
                     >
-                      <Link href="/doctor-details">
+                      <Link href="#what-we-do">
                         Customized Reporting and Analytics
                       </Link>
                     </motion.h3>
@@ -143,7 +143,7 @@ const OurExpertise = () => {
                         transition: { duration: 0.5, delay: 0.2 },
                       }}
                     >
-                      <Link href="/doctor-details">Integration with EHR</Link>
+                      <Link href="#what-we-do">Integration with EHR</Link>
                     </motion.h3>
                     <motion.p
                       viewport={{ once: true }}

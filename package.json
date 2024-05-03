@@ -1,12 +1,12 @@
 {
   "name": "disin",
   "version": "1.4.0",
-  "description": "Disin - React Next Medical Health & Doctors Template",
-  "main": "index.js",
+  "description": "Provider Concerns - Medical Billing Solutions",
+  "main": "index.js"  ,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "author": "HiBootstrap.com",
   "license": "ISC",
