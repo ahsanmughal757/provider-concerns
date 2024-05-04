@@ -89,7 +89,7 @@ const HeroSlider = () => {
                       }}
                       className="common-btn"
                     >
-                      <Link href="tel:+14099347674​">Click to Call</Link>
+                      <Link href="tel:+18882852880">Click to Call</Link>
                       <Link href="#contact" className="cmn-btn-right">
                         Make Appointment
                       </Link>
@@ -164,7 +164,7 @@ const HeroSlider = () => {
                       }}
                       className="common-btn"
                     >
-                      <Link href="tel:+14099347674​">Click to Call</Link>
+                      <Link href="tel:+18882852880">Click to Call</Link>
                       <Link href="#contact" className="cmn-btn-right">
                         Make Appointment
                       </Link>
@@ -201,7 +201,7 @@ const HeroSlider = () => {
                     </p>
 
                     <div className="common-btn">
-                      <Link href="tel:+14099347674​">Click to Call</Link>
+                      <Link href="tel:+18882852880​">Click to Call</Link>
 
                       <Link href="#contact" className="cmn-btn-right">
                         Make Appointment
