@@ -1,20 +1,20 @@
 import React from "react";
 import axios from "axios";
-import {
-  Form,
-  Field,
-  FormikProvider,
-  ErrorMessage,
-  useFormik,
-} from "formik";
+import { Form, Field, FormikProvider, ErrorMessage, useFormik } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 
 import TextInputLiveFeedback from "../Forms/TextInputLiveFeedback";
 
+const domain =
+    process.env.NODE_ENV === "production"
+      ? process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN
+      : process.env.NEXT_PUBLIC_LOCAL_DOMAIN;
+
 
 const Consultation = () => {
+
   // Phone Number Validation
   const phoneRegExp =
     /^\+?((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
@@ -44,7 +44,7 @@ const Consultation = () => {
     // alert(JSON.stringify(values));
     Swal.showLoading();
     await axios
-      .post("/api/request-consultation", {
+      .post(`/api/request-consultation`, {
         name: values.name,
         email: values.email,
         number: values.phone,

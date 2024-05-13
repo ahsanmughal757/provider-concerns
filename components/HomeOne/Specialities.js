@@ -66,11 +66,11 @@ const Specialities = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 height="70"
-                fill="#4d93e9"
+                fill="#0088cc"
                 id="Layer_1"
                 viewBox="0 0 512 512"
                 xmlSpace="preserve"
-                stroke="#4d93e9"
+                stroke="#0088cc"
                 strokeWidth="12.24"
               >
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>

@@ -5,6 +5,9 @@ import { Navigation, Autoplay } from "swiper";
 const TestimonialSlider = () => {
   return (
     <>
+      <div id="testimonials" className="container mb-5">
+        <h2 className="underline-text">Testimonials</h2>
+      </div>
       <div style={{ marginBottom: "120px" }} className="review-area ptb-100">
         <div className="container">
           <Swiper
@@ -74,7 +77,7 @@ const TestimonialSlider = () => {
                 <div className="client-img mb-4">
                   {/* <img src="/images/clients/client3.png" alt="Feedback" /> */}
                   <h3 className="mb-0">LabTech Diagnostics</h3>
-                  {/* <p className="text-secondary">-Internal Medicine</p> */}
+                  <p className="text-secondary">-Toxicology</p>
                 </div>
                 <p className="fst-italic">
                   "Provider Concerns Solutions has been instrumental in

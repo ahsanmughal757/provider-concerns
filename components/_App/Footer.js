@@ -15,21 +15,9 @@ import TextInputLiveFeedback from "../Forms/TextInputLiveFeedback";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // Phone Number Validation
-  const phoneRegExp =
-    /^\+?((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-
   // YUP Validation Schema
   const validationSchema = Yup.object({
-    name: Yup.string()
-      .max(20, "Must be less  than 20 characters")
-      .required("Name is required")
-      .matches(/^[a-zA-Z0-9\s]+$/, "Alpha Numeric characters only allowed"),
-    phone: Yup.string()
-      .matches(phoneRegExp, "Phone number is invalid")
-      .required("Phone is required"),
     email: Yup.string().email("Invalid email address").required("Email is required"),
-    message: Yup.string().required("Message is required"),
   });
 
   // Handle Form Submit
@@ -37,16 +25,13 @@ const Footer = () => {
     // alert(JSON.stringify(values));
     Swal.showLoading();
     await axios
-      .post("/api/feedback", {
-        name: values.name,
-        phone: values.phone,
+      .post("/api/subscribe", {
         email: values.email,
-        message: values.message,
       })
       .then((res) => {
         Swal.fire({
           title: "Done",
-          text: "Feedback Submitted!",
+          text: "Subscribed!",
           icon: "success",
         });
 
@@ -64,10 +49,7 @@ const Footer = () => {
   // Formik Hook
   const formik = useFormik({
     initialValues: {
-      name: "",
-      phone: "",
       email: "",
-      message: "",
     },
     onSubmit: handleSubmit,
     validationSchema,
@@ -116,6 +98,12 @@ const Footer = () => {
                     <li>
                       <Link href="/specialities">Specialities</Link>
                     </li>
+                    <li>
+                      <Link href="#what-we-do">What we do</Link>
+                    </li>
+                    <li>
+                      <Link href="#testimonials">Testimonials</Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -151,15 +139,8 @@ const Footer = () => {
                 <FormikProvider value={formik}>
                   <Form>
                     <div className="footer-feedback">
-                      <h3>Feedback</h3>
-                      <div className="form-group">
-                        <TextInputLiveFeedback
-                          type="text"
-                          name="name"
-                          className="form-control"
-                          placeholder="Name"
-                        />
-                      </div>
+                      <h3>Subscribe to Newsletter</h3>
+                      
                       <div className="form-group">
                         <TextInputLiveFeedback
                           type="email"
@@ -168,30 +149,10 @@ const Footer = () => {
                           placeholder="Email"
                         />
                       </div>
-                      <div className="form-group">
-                        <TextInputLiveFeedback
-                          type="text"
-                          name="phone"
-                          className="form-control"
-                          placeholder="Phone"
-                        />
-                      </div>
-                      <div className="form-group">
-                        <div className="d-flex justify-content-end">
-                          <ErrorMessage className="error" name="message" component="div" />
-                        </div>
-                        <Field
-                          className="form-control"
-                          id="message"
-                          name="message"
-                          rows="3"
-                          as="textarea"
-                          placeholder="Message"
-                        ></Field>
-                      </div>
+                      
                       <div className="text-left">
                         <button type="submit" className="btn feedback-btn">
-                          SUBMIT
+                          Subscribe
                         </button>
                       </div>
                     </div>
