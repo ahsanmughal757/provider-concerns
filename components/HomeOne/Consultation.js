@@ -8,13 +8,11 @@ import Swal from "sweetalert2";
 import TextInputLiveFeedback from "../Forms/TextInputLiveFeedback";
 
 const domain =
-    process.env.NODE_ENV === "production"
-      ? process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN
-      : process.env.NEXT_PUBLIC_LOCAL_DOMAIN;
-
+  process.env.NODE_ENV === "production"
+    ? process.env.NEXT_PUBLIC_PRODUCTION_DOMAIN
+    : process.env.NEXT_PUBLIC_LOCAL_DOMAIN;
 
 const Consultation = () => {
-
   // Phone Number Validation
   const phoneRegExp =
     /^\+?((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
@@ -52,6 +50,18 @@ const Consultation = () => {
         text: values.message,
       })
       .then((res) => {
+        if (
+          res?.data?.message === "EMAIL_SEND_ERROR" ||
+          res?.data?.message === "Error_proccessing_charge"
+        ) {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+          return;
+        }
+
         Swal.fire({
           title: "Done",
           text: "Email Sent Successfully!",
@@ -193,9 +203,9 @@ const Consultation = () => {
                         className="form-select"
                         aria-label="Default select example"
                       >
-                        <option value="1k-30k">1k-30k</option>
                         <option value="Less than 1k">Less than 1k</option>
-                        <option value="None">None</option>
+                        <option value="1k-30k">1k-30k</option>
+                        <option value="More than 30k">More than 30k</option>
                       </Field>
                     </div>
                   </div>
@@ -239,7 +249,7 @@ const Consultation = () => {
                       >
                         <option value="1-5">1-5</option>
                         <option value="5-10">5-10</option>
-                        <option value="None">None</option>
+                        <option value="More than 10">More than 10</option>
                       </Field>
                     </div>
                   </div>

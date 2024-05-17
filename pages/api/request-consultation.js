@@ -1,20 +1,29 @@
 import nodemailer from "nodemailer";
 
-const transporter = {
+const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: process.env.SMTP_PORT,
   secure: true,
-};
-
-console.log("SMTP_HOST", process.env.SMTP_HOST);
-console.log("SMTP_PORT", process.env.SMTP_PORT);
+  auth: {
+    user: process.env.SUPPORT_EMAIL,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
 const mailer = nodemailer.createTransport(transporter);
 
 export default async (req, res) => {
   const { name, email, businessName, number, text } = req.body;
 
-  const data = {
+  // var mailOptions = {
+  //   from: "ahsanmg1998@gmail.com",
+  //   to: "andrewhall0552@gmail.com",
+  //   subject: "Consu",
+  //   text: "Thanks for booking the consultation.",
+  //   html: "<b><i>Thanks for booking the consultation.</i></b>",
+  // };
+
+  const mailOptions = {
     // Update your email here
     to: process.env.SUPPORT_EMAIL,
     from: email,
@@ -50,11 +59,22 @@ export default async (req, res) => {
     </div>`,
   };
   try {
-    const response = await mailer.sendMail(data);
-    console.log(response);
-    res.status(200).send("Email send successfully");
+    // const response = await mailer.sendMail(mailOptions);
+    // console.log(response);
+
+    transporter.sendMail(mailOptions, async function (error, info) {
+      if (error) {
+        console.log(error);
+        return res.status(500).send({ message: "EMAIL_SEND_ERROR" });
+      }
+
+      // console.log("Email sent! Info:: " + JSON.stringify(info));
+
+      return res.status(200).send({ message: "EMAIL_SENT_SUCCESS" });
+    });
+    // res.status(200).send("Email send successfully");
   } catch (error) {
     console.log(error);
-    res.status(500).send("Error proccessing charge");
+    res.status(500).send("Error_proccessing_charge");
   }
 };
