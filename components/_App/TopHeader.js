@@ -74,9 +74,9 @@ const TopHeader = () => {
                     </li>
                     <span className="vertical-separator p-0"></span>
                     <li>
-                      <a className="email-link" href="mailto:support@providerconcerns.com">
-                        <i className="icofont-ui-message  text-light"></i>
-                        support@providerconcerns.com
+                      <a className="email-link" href="mailto:andrewhall0552@gmail.com">
+                        <i className="icofont-ui-message text-light"></i>
+                        andrewhall0552@gmail.com
                       </a>
                     </li>
                   </ul>
