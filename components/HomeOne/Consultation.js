@@ -203,9 +203,9 @@ const Consultation = () => {
                         className="form-select"
                         aria-label="Default select example"
                       >
-                        <option value="Less than 1k">Less than 1k</option>
-                        <option value="1k-30k">1k-30k</option>
-                        <option value="More than 30k">More than 30k</option>
+                        <option value="Less than 10k">Less than 10k</option>
+                        <option value="10k-50k">10k-50k</option>
+                        <option value="More than 50k">More than 50k</option>
                       </Field>
                     </div>
                   </div>

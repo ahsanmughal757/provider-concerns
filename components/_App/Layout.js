@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Medical Billing Services - Provider Concerns Solutions</title>
+        <title>Healthcare Provider Billing Solutions - Provider Concerns Solutions</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
