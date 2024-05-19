@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import { render } from "@react-email/render";
 import { ConsultationResponseEmail } from "../../emails/consultation-response";
+import path from "path";
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -28,12 +29,14 @@ export default async (req, res) => {
     attachments: [
       {
         filename: "PCS Company Profile.pdf",
-        path: "public/pdfs/PCS_Company_Profile.pdf",
+        path: path.resolve("public/pdfs/PCS_Company_Profile.pdf"),
         contentType: "application/pdf",
       },
     ],
   };
   try {
+
+    console.log("__dirname: ", __dirname);
     await transporter.sendMail(mailOptions, async function (error, info) {
       if (error) {
         console.log(error);
