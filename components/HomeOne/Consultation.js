@@ -41,6 +41,8 @@ const Consultation = () => {
   const handleSubmit = async (values) => {
     // alert(JSON.stringify(values));
     Swal.showLoading();
+
+    // Consultation Request Email
     await axios
       .post(`/api/request-consultation`, {
         name: values.name,
@@ -64,7 +66,7 @@ const Consultation = () => {
 
         Swal.fire({
           title: "Done",
-          text: "Email Sent Successfully!",
+          text: "Request Submitted Successfully!",
           icon: "success",
         });
 
@@ -76,6 +78,26 @@ const Consultation = () => {
           title: "Oops...",
           text: "Something went wrong!",
         });
+      });
+
+    // Send Consultation Response Email
+    await axios
+      .post(`/api/consultation-response`, {
+        name: values.name,
+        email: values.email,
+      })
+      .then((res) => {
+        if (
+          res?.data?.message === "EMAIL_SEND_ERROR" ||
+          res?.data?.message === "Error_proccessing_charge"
+        ) {
+          console.error("Error sending response to user!");
+          return;
+        }
+        console.log("Response successfully sent to user!");
+      })
+      .catch((err) => {
+        console.error("Error sending response to user!");
       });
   };
 

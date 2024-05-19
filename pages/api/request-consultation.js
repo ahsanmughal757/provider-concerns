@@ -15,17 +15,9 @@ const mailer = nodemailer.createTransport(transporter);
 export default async (req, res) => {
   const { name, email, businessName, number, text } = req.body;
 
-  // var mailOptions = {
-  //   from: "ahsanmg1998@gmail.com",
-  //   to: "andrewhall0552@gmail.com",
-  //   subject: "Consu",
-  //   text: "Thanks for booking the consultation.",
-  //   html: "<b><i>Thanks for booking the consultation.</i></b>",
-  // };
-
   const mailOptions = {
     // Update your email here
-    to: process.env.SUPPORT_EMAIL,
+    to: `Provider Concerns Consultation - <${process.env.SUPPORT_EMAIL}>`,
     from: email,
     subject: `Consultation Request from ${name}`,
     text: text,
@@ -59,16 +51,11 @@ export default async (req, res) => {
     </div>`,
   };
   try {
-    // const response = await mailer.sendMail(mailOptions);
-    // console.log(response);
-
     transporter.sendMail(mailOptions, async function (error, info) {
       if (error) {
         console.log(error);
         return res.status(500).send({ message: "EMAIL_SEND_ERROR" });
       }
-
-      // console.log("Email sent! Info:: " + JSON.stringify(info));
 
       return res.status(200).send({ message: "EMAIL_SENT_SUCCESS" });
     });

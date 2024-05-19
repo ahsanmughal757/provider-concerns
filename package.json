@@ -11,6 +11,8 @@
   "author": "HiBootstrap.com",
   "license": "ISC",
   "dependencies": {
+    "@react-email/components": "^0.0.17",
+    "@react-email/render": "^0.0.13",
     "axios": "^1.6.8",
     "bootstrap-icons": "^1.11.3",
     "express": "^4.19.2",
