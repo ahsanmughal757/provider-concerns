@@ -68,7 +68,7 @@ const Footer = () => {
                     <li>
                       <i className="icofont-ui-message"></i>
                       <a href="mailto:andrewhall0552@gmail.com">
-                      andrewhall0552@gmail.com
+                      support@providerconcerns.com
                       </a>
                     </li>
                     <li>

@@ -45,7 +45,7 @@ const GoogleMap = () => {
                   <i className="icofont-email"></i>
                   <h5 className="text-blue">Mail Us</h5>
                 </div>
-                <p>andrewhall0552@gmail.com</p>
+                <p>support@providerconcerns.com</p>
               </div>
             </div>
           </div>
