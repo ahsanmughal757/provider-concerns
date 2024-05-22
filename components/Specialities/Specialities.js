@@ -26,7 +26,7 @@ const Specialities = () => {
                       <path d="M192 0C79.7 101.3 0 220.9 0 300.5 0 425 79 512 192 512s192-87 192-211.5c0-79.9-80.2-199.6-192-300.5zm0 448c-56.5 0-96-39-96-94.8 0-13.5 4.6-61.5 96-161.2 91.4 99.7 96 147.7 96 161.2 0 55.8-39.5 94.8-96 94.8z"></path>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/hematology">
                     <h3>Hematology</h3>
                   </Link>
                 </div>
@@ -48,7 +48,7 @@ const Specialities = () => {
                       <path d="M160 320h12v16c0 8.84 7.16 16 16 16h40c8.84 0 16-7.16 16-16v-16h12c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32V16c0-8.84-7.16-16-16-16h-64c-8.84 0-16 7.16-16 16v16c-17.67 0-32 14.33-32 32v224c0 17.67 14.33 32 32 32zm304 128h-1.29C493.24 413.99 512 369.2 512 320c0-105.88-86.12-192-192-192v64c70.58 0 128 57.42 128 128s-57.42 128-128 128H48c-26.51 0-48 21.49-48 48 0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48zm-360-32h208c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8H104c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8z"></path>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/clinical-lab">
                     <h3>Clinical Lab</h3>
                   </Link>
                 </div>
@@ -70,7 +70,7 @@ const Specialities = () => {
                       <path d="M320.2 243.8l-49.7 99.4c-6 12.1-23.4 11.7-28.9-.6l-56.9-126.3-30 71.7H60.6l182.5 186.5c7.1 7.3 18.6 7.3 25.7 0L451.4 288H342.3l-22.1-44.2zM473.7 73.9l-2.4-2.5c-51.5-52.6-135.8-52.6-187.4 0L256 100l-27.9-28.5c-51.5-52.7-135.9-52.7-187.4 0l-2.4 2.4C-10.4 123.7-12.5 203 31 256h102.4l35.9-86.2c5.4-12.9 23.6-13.2 29.4-.4l58.2 129.3 49-97.9c5.9-11.8 22.7-11.8 28.6 0l27.6 55.2H481c43.5-53 41.4-132.3-7.3-182.1z"></path>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/cardialogy">
                     <h3>Cardiology</h3>
                   </Link>
                 </div>
@@ -92,7 +92,7 @@ const Specialities = () => {
                       <path d="M201.5 174.8l55.7 55.8c3.1 3.1 3.1 8.2 0 11.3l-11.3 11.3c-3.1 3.1-8.2 3.1-11.3 0l-55.7-55.8-45.3 45.3 55.8 55.8c3.1 3.1 3.1 8.2 0 11.3l-11.3 11.3c-3.1 3.1-8.2 3.1-11.3 0L111 265.2l-26.4 26.4c-17.3 17.3-25.6 41.1-23 65.4l7.1 63.6L2.3 487c-3.1 3.1-3.1 8.2 0 11.3l11.3 11.3c3.1 3.1 8.2 3.1 11.3 0l66.3-66.3 63.6 7.1c23.9 2.6 47.9-5.4 65.4-23l181.9-181.9-135.7-135.7-64.9 65zm308.2-93.3L430.5 2.3c-3.1-3.1-8.2-3.1-11.3 0l-11.3 11.3c-3.1 3.1-3.1 8.2 0 11.3l28.3 28.3-45.3 45.3-56.6-56.6-17-17c-3.1-3.1-8.2-3.1-11.3 0l-33.9 33.9c-3.1 3.1-3.1 8.2 0 11.3l17 17L424.8 223l17 17c3.1 3.1 8.2 3.1 11.3 0l33.9-34c3.1-3.1 3.1-8.2 0-11.3l-73.5-73.5 45.3-45.3 28.3 28.3c3.1 3.1 8.2 3.1 11.3 0l11.3-11.3c3.1-3.2 3.1-8.2 0-11.4z"></path>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/general-surgery">
                     <h3>General Surgery</h3>
                   </Link>
                 </div>
@@ -114,7 +114,7 @@ const Specialities = () => {
                       <path d="M555.3 300.1L424.2 112.8C401.9 81 366.4 64 330.4 64c-22.6 0-45.5 6.7-65.5 20.7-19.7 13.8-33.7 32.8-41.5 53.8C220.5 79.2 172 32 112 32 50.1 32 0 82.1 0 144v224c0 61.9 50.1 112 112 112s112-50.1 112-112V218.9c3.3 8.6 7.3 17.1 12.8 25L368 431.2c22.2 31.8 57.7 48.8 93.8 48.8 22.7 0 45.5-6.7 65.5-20.7 51.7-36.2 64.2-107.5 28-159.2zM160 256H64V144c0-26.5 21.5-48 48-48s48 21.5 48 48v112zm194.8 44.9l-65.6-93.7c-7.7-11-10.7-24.4-8.3-37.6 2.3-13.2 9.7-24.8 20.7-32.5 8.5-6 18.5-9.1 28.8-9.1 16.5 0 31.9 8 41.3 21.5l65.6 93.7-82.5 57.7z"></path>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/urology">
                     <h3>Urology</h3>
                   </Link>
                 </div>
@@ -136,7 +136,7 @@ const Specialities = () => {
                       <path d="M464 128h-80V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48zM192 96h128v32H192V96zm160 248c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48z"></path>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/medical-clinics">
                     <h3>Medical Clinics</h3>
                   </Link>
                 </div>
@@ -176,7 +176,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/hepatology">
                     <h3>Hepatology</h3>
                   </Link>
                 </div>
@@ -229,7 +229,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/oncology">
                     <h3>Oncology</h3>
                   </Link>
                 </div>
@@ -338,7 +338,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/podiatry">
                     <h3>Podiatry</h3>
                   </Link>
                 </div>
@@ -389,7 +389,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/psychiatric">
                     <h3>Psychiatric</h3>
                   </Link>
                 </div>
@@ -502,7 +502,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/rheumatology">
                     <h3>Rheumatology</h3>
                   </Link>
                 </div>
@@ -542,7 +542,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/dermatology">
                     <h3>Dermatology</h3>
                   </Link>
                 </div>
@@ -564,7 +564,7 @@ const Specialities = () => {
                       <path d="M160 320h12v16c0 8.84 7.16 16 16 16h40c8.84 0 16-7.16 16-16v-16h12c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32V16c0-8.84-7.16-16-16-16h-64c-8.84 0-16 7.16-16 16v16c-17.67 0-32 14.33-32 32v224c0 17.67 14.33 32 32 32zm304 128h-1.29C493.24 413.99 512 369.2 512 320c0-105.88-86.12-192-192-192v64c70.58 0 128 57.42 128 128s-57.42 128-128 128H48c-26.51 0-48 21.49-48 48 0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48zm-360-32h208c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8H104c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8z"></path>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/pathology-lab">
                     <h3>Pathology Lab</h3>
                   </Link>
                 </div>
@@ -629,7 +629,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/gastroenterology">
                     <h3>Gastroenterology</h3>
                   </Link>
                 </div>
@@ -1020,7 +1020,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/toxicology-lab">
                     <h3>Toxicology Lab</h3>
                   </Link>
                 </div>
@@ -1074,7 +1074,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/nursing-home">
                     <h3>Nursing Home</h3>
                   </Link>
                 </div>
@@ -1162,7 +1162,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/ambulatory-surgery">
                     <h3>Ambulatory Surgery</h3>
                   </Link>
                 </div>
@@ -1195,7 +1195,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/molecular-lab">
                     <h3>Molecular Lab</h3>
                   </Link>
                 </div>
@@ -1255,7 +1255,7 @@ const Specialities = () => {
                       </g>
                     </svg>
                   </i>
-                  <Link href="#">
+                  <Link href="/specialities/radiology">
                     <h3>Radiology</h3>
                   </Link>
                 </div>
