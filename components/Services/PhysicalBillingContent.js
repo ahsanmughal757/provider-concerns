@@ -6,10 +6,10 @@ const PhysicalBillingContent = () => {
       <div className="service-details-area ptb-100">
         <div className="container">
           <div className="service-heading">
-            <h1>Physical Billing</h1>
+            <h1>Physician Billing</h1>
           </div>
           <div className="services-details-img">
-            <img src="/images/service-details-bg.jpg" alt="Service Details" />
+            <img src="/images/physician-billing.jpg" alt="Service Details" />
 
             <h2>Practitioner Financial Administration Services</h2>
             <p>

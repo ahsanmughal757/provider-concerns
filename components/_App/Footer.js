@@ -121,7 +121,7 @@ const Footer = () => {
                       <Link href="/laboratory-billing">Laboratory Billing</Link>
                     </li>
                     <li>
-                      <Link href="/physical-billing">Physician Billing</Link>
+                      <Link href="/physician-billing">Physician Billing</Link>
                     </li>
                     <li>
                       <Link href="/hospital-billing">Hospital Billing</Link>

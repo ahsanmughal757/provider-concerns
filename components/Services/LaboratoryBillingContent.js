@@ -9,7 +9,7 @@ const LaboratoryBillingContent = () => {
             <h1>Laboratory Billing</h1>
           </div>
           <div className="services-details-img">
-            <img src="/images/service-details-bg.jpg" alt="Service Details" />
+            <img src="/images/laboratory-billing.jpg" alt="Service Details" />
 
             <h2>Comprehensive Lab Billing Services by PCS</h2>
             <p>

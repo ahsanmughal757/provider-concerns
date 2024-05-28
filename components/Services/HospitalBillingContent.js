@@ -9,7 +9,7 @@ const HospitalBillingContent = () => {
                 <h1>Hospital Billing</h1>
             </div>
           <div className="services-details-img">
-            <img src="/images/service-details-bg.jpg" alt="Service Details" />
+            <img src="/images/hospital-billing.jpg" alt="Service Details" />
 
             <h2>
               Specialized Hospital Billing Solutions Aligned with Your
