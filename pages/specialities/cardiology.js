@@ -1,7 +1,7 @@
 import Navbar from "../../components/_App/Navbar";
 import Footer from "../../components/_App/Footer";
 
-const Hepatology = () => {
+const Cardiology = () => {
   return (
     <>
       <Navbar />
@@ -95,4 +95,4 @@ const Hepatology = () => {
   );
 };
 
-export default Hepatology;
+export default Cardiology;

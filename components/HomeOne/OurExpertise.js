@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Element } from "react-scroll";
 
 const OurExpertise = () => {
   return (
     <>
-      <div id="what-we-do" className="expertise-area pb-70">
+      <Element name="expertise" id="what-we-do" className="expertise-area pb-70">
         <div className="container">
           <div className="section-title">
             <h2>What we do</h2>
@@ -172,7 +173,7 @@ const OurExpertise = () => {
             </div> */}
           </div>
         </div>
-      </div>
+      </Element>
     </>
   );
 };

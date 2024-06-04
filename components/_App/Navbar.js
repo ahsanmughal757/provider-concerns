@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+
 import Link from "next/link";
+import {
+  Link as ScrollLink,
+  animateScroll as scroll,
+  scroller,
+} from "react-scroll";
 
 const Navbar = () => {
   // Add active class
@@ -35,6 +41,21 @@ const Navbar = () => {
   const classTwo = menu
     ? "navbar-toggler navbar-toggler-right collapsed"
     : "navbar-toggler navbar-toggler-right";
+
+
+  const handleServices = () => {
+    if (router.pathname !== "/") {
+      router.push("/")
+      scroll.scrollTo(2000)
+    }
+  }
+
+  const handleExpertise = () => {
+    if (router.pathname !== "/") {
+      router.push("/")
+      scroll.scrollTo(2700)
+    }
+  }
 
   return (
     <>
@@ -86,9 +107,16 @@ const Navbar = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#services" className="nav-link">
+                    <ScrollLink
+                      to="services"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      onClick={handleServices}
+                      className="nav-link"
+                    >
                       Services
-                    </Link>
+                    </ScrollLink>
                   </li>
 
                   <li className="nav-item">
@@ -98,9 +126,16 @@ const Navbar = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href="#what-we-do" className="nav-link">
+                    <ScrollLink
+                      to="expertise"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      onClick={handleExpertise}
+                      className="nav-link"
+                    >
                       What we do
-                    </Link>
+                    </ScrollLink>
                   </li>
 
                   {/* <li className="nav-item">
